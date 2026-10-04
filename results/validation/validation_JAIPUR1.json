@@ -1,0 +1,140 @@
+{
+  "label": "Method validation with injected loss — not a field result",
+  "system_id": "JAIPUR1",
+  "available": true,
+  "stretch": [
+    "2022-01-01",
+    "2022-08-28"
+  ],
+  "baseline_before_injection": {
+    "lost_kwh": 1852.3,
+    "lost_kwh_ci": [
+      0.0,
+      3088.6
+    ],
+    "loss_pct": 1.55
+  },
+  "injected": {
+    "ramp_start": "2022-02-15",
+    "ramp_end": "2022-04-15",
+    "ramp_peak_pct": 10.0,
+    "outage_days": [
+      "2022-05-15",
+      "2022-05-16",
+      "2022-05-17"
+    ],
+    "injected_ramp_kwh": 1881.5,
+    "injected_outage_kwh": 1647.3,
+    "injected_kwh": 3528.8
+  },
+  "estimated_after_injection": {
+    "lost_kwh": 3262.9,
+    "lost_kwh_ci": [
+      1244.6,
+      4275.9
+    ],
+    "sustained_kwh": 1527.3,
+    "outage_kwh": 1735.6
+  },
+  "recovered_kwh": 1410.6,
+  "recovered_share_of_injected_pct": 40.0,
+  "injected_within_stated_range": false,
+  "outage_days_detected": "3 of 3",
+  "detection_limit_check": [
+    {
+      "window_days": 14,
+      "injected_step_pct": 4.54,
+      "multiple_of_stated_limit": 0.5,
+      "trials": 30,
+      "detected_share_pct": 10
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 9.07,
+      "multiple_of_stated_limit": 1.0,
+      "trials": 30,
+      "detected_share_pct": 17
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 13.61,
+      "multiple_of_stated_limit": 1.5,
+      "trials": 30,
+      "detected_share_pct": 30
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 18.14,
+      "multiple_of_stated_limit": 2.0,
+      "trials": 30,
+      "detected_share_pct": 73
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 22.68,
+      "multiple_of_stated_limit": 2.5,
+      "trials": 30,
+      "detected_share_pct": 77
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 27.21,
+      "multiple_of_stated_limit": 3.0,
+      "trials": 30,
+      "detected_share_pct": 77
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 6.0,
+      "multiple_of_stated_limit": 0.5,
+      "trials": 30,
+      "detected_share_pct": 20
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 12.0,
+      "multiple_of_stated_limit": 1.0,
+      "trials": 30,
+      "detected_share_pct": 43
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 18.01,
+      "multiple_of_stated_limit": 1.5,
+      "trials": 30,
+      "detected_share_pct": 77
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 24.01,
+      "multiple_of_stated_limit": 2.0,
+      "trials": 30,
+      "detected_share_pct": 80
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 30.01,
+      "multiple_of_stated_limit": 2.5,
+      "trials": 30,
+      "detected_share_pct": 90
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 36.01,
+      "multiple_of_stated_limit": 3.0,
+      "trials": 30,
+      "detected_share_pct": 90
+    }
+  ],
+  "reliable_detection": {
+    "14": {
+      "step_pct": null,
+      "note": "not reached within 27.21%"
+    },
+    "30": {
+      "step_pct": 24.01,
+      "detected_share_pct": 80
+    }
+  },
+  "data_label": "Public dataset: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)"
+}

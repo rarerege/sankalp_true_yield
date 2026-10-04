@@ -1,0 +1,140 @@
+{
+  "label": "Method validation with injected loss — not a field result",
+  "system_id": "1420",
+  "available": true,
+  "stretch": [
+    "2018-04-13",
+    "2018-12-08"
+  ],
+  "baseline_before_injection": {
+    "lost_kwh": 0.0,
+    "lost_kwh_ci": [
+      0.0,
+      496.9
+    ],
+    "loss_pct": 0.0
+  },
+  "injected": {
+    "ramp_start": "2018-05-28",
+    "ramp_end": "2018-07-26",
+    "ramp_peak_pct": 10.0,
+    "outage_days": [
+      "2018-08-25",
+      "2018-08-26",
+      "2018-08-27"
+    ],
+    "injected_ramp_kwh": 621.2,
+    "injected_outage_kwh": 600.0,
+    "injected_kwh": 1221.2
+  },
+  "estimated_after_injection": {
+    "lost_kwh": 1041.3,
+    "lost_kwh_ci": [
+      762.4,
+      1610.4
+    ],
+    "sustained_kwh": 445.2,
+    "outage_kwh": 596.1
+  },
+  "recovered_kwh": 1041.3,
+  "recovered_share_of_injected_pct": 85.3,
+  "injected_within_stated_range": true,
+  "outage_days_detected": "3 of 3",
+  "detection_limit_check": [
+    {
+      "window_days": 14,
+      "injected_step_pct": 2.03,
+      "multiple_of_stated_limit": 0.5,
+      "trials": 30,
+      "detected_share_pct": 27
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 4.06,
+      "multiple_of_stated_limit": 1.0,
+      "trials": 30,
+      "detected_share_pct": 80
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 6.09,
+      "multiple_of_stated_limit": 1.5,
+      "trials": 30,
+      "detected_share_pct": 93
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 8.11,
+      "multiple_of_stated_limit": 2.0,
+      "trials": 30,
+      "detected_share_pct": 97
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 10.14,
+      "multiple_of_stated_limit": 2.5,
+      "trials": 30,
+      "detected_share_pct": 100
+    },
+    {
+      "window_days": 14,
+      "injected_step_pct": 12.17,
+      "multiple_of_stated_limit": 3.0,
+      "trials": 30,
+      "detected_share_pct": 100
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 1.99,
+      "multiple_of_stated_limit": 0.5,
+      "trials": 30,
+      "detected_share_pct": 47
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 3.98,
+      "multiple_of_stated_limit": 1.0,
+      "trials": 30,
+      "detected_share_pct": 90
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 5.97,
+      "multiple_of_stated_limit": 1.5,
+      "trials": 30,
+      "detected_share_pct": 100
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 7.96,
+      "multiple_of_stated_limit": 2.0,
+      "trials": 30,
+      "detected_share_pct": 100
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 9.95,
+      "multiple_of_stated_limit": 2.5,
+      "trials": 30,
+      "detected_share_pct": 100
+    },
+    {
+      "window_days": 30,
+      "injected_step_pct": 11.94,
+      "multiple_of_stated_limit": 3.0,
+      "trials": 30,
+      "detected_share_pct": 100
+    }
+  ],
+  "reliable_detection": {
+    "14": {
+      "step_pct": 4.06,
+      "detected_share_pct": 80
+    },
+    "30": {
+      "step_pct": 3.98,
+      "detected_share_pct": 90
+    }
+  },
+  "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake"
+}

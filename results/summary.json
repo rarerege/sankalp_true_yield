@@ -1,0 +1,4481 @@
+{
+  "generated_on": "2026-10-04",
+  "tool": "TrueYield prototype (physics and statistics only; no machine learning, no LLM calls)",
+  "data_labels": [
+    "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake",
+    "Public dataset: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)"
+  ],
+  "datasets": [
+    {
+      "data_label": "Public dataset: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)",
+      "system_ids": [
+        "JAIPUR1"
+      ],
+      "totals": {
+        "systems": 1,
+        "lost_kwh": 14893.5532,
+        "expected_kwh": 176663.6193,
+        "loss_pct": 8.4305,
+        "lost_kwh_ci": [
+          11232.4598,
+          16366.4575
+        ],
+        "loss_pct_ci": [
+          6.53,
+          9.2463
+        ]
+      },
+      "method_validation": {
+        "label": "Method validation with injected loss — not a field result",
+        "system_id": "JAIPUR1",
+        "available": true,
+        "stretch": [
+          "2022-01-01",
+          "2022-08-28"
+        ],
+        "baseline_before_injection": {
+          "lost_kwh": 1852.3,
+          "lost_kwh_ci": [
+            0.0,
+            3088.6
+          ],
+          "loss_pct": 1.55
+        },
+        "injected": {
+          "ramp_start": "2022-02-15",
+          "ramp_end": "2022-04-15",
+          "ramp_peak_pct": 10.0,
+          "outage_days": [
+            "2022-05-15",
+            "2022-05-16",
+            "2022-05-17"
+          ],
+          "injected_ramp_kwh": 1881.5,
+          "injected_outage_kwh": 1647.3,
+          "injected_kwh": 3528.8
+        },
+        "estimated_after_injection": {
+          "lost_kwh": 3262.9,
+          "lost_kwh_ci": [
+            1244.6,
+            4275.9
+          ],
+          "sustained_kwh": 1527.3,
+          "outage_kwh": 1735.6
+        },
+        "recovered_kwh": 1410.6,
+        "recovered_share_of_injected_pct": 40.0,
+        "injected_within_stated_range": false,
+        "outage_days_detected": "3 of 3",
+        "detection_limit_check": [
+          {
+            "window_days": 14,
+            "injected_step_pct": 4.54,
+            "multiple_of_stated_limit": 0.5,
+            "trials": 30,
+            "detected_share_pct": 10
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 9.07,
+            "multiple_of_stated_limit": 1.0,
+            "trials": 30,
+            "detected_share_pct": 17
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 13.61,
+            "multiple_of_stated_limit": 1.5,
+            "trials": 30,
+            "detected_share_pct": 30
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 18.14,
+            "multiple_of_stated_limit": 2.0,
+            "trials": 30,
+            "detected_share_pct": 73
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 22.68,
+            "multiple_of_stated_limit": 2.5,
+            "trials": 30,
+            "detected_share_pct": 77
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 27.21,
+            "multiple_of_stated_limit": 3.0,
+            "trials": 30,
+            "detected_share_pct": 77
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 6.0,
+            "multiple_of_stated_limit": 0.5,
+            "trials": 30,
+            "detected_share_pct": 20
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 12.0,
+            "multiple_of_stated_limit": 1.0,
+            "trials": 30,
+            "detected_share_pct": 43
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 18.01,
+            "multiple_of_stated_limit": 1.5,
+            "trials": 30,
+            "detected_share_pct": 77
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 24.01,
+            "multiple_of_stated_limit": 2.0,
+            "trials": 30,
+            "detected_share_pct": 80
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 30.01,
+            "multiple_of_stated_limit": 2.5,
+            "trials": 30,
+            "detected_share_pct": 90
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 36.01,
+            "multiple_of_stated_limit": 3.0,
+            "trials": 30,
+            "detected_share_pct": 90
+          }
+        ],
+        "reliable_detection": {
+          "14": {
+            "step_pct": null,
+            "note": "not reached within 27.21%"
+          },
+          "30": {
+            "step_pct": 24.01,
+            "detected_share_pct": 80
+          }
+        },
+        "data_label": "Public dataset: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)"
+      }
+    },
+    {
+      "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake",
+      "system_ids": [
+        "1419",
+        "1420",
+        "34"
+      ],
+      "totals": {
+        "systems": 3,
+        "lost_kwh": 52443.1966,
+        "expected_kwh": 1368931.9675,
+        "loss_pct": 3.831,
+        "lost_kwh_ci": [
+          48002.4918,
+          57819.7992
+        ],
+        "loss_pct_ci": [
+          3.5234,
+          4.2071
+        ]
+      },
+      "method_validation": {
+        "label": "Method validation with injected loss — not a field result",
+        "system_id": "1420",
+        "available": true,
+        "stretch": [
+          "2018-04-13",
+          "2018-12-08"
+        ],
+        "baseline_before_injection": {
+          "lost_kwh": 0.0,
+          "lost_kwh_ci": [
+            0.0,
+            496.9
+          ],
+          "loss_pct": 0.0
+        },
+        "injected": {
+          "ramp_start": "2018-05-28",
+          "ramp_end": "2018-07-26",
+          "ramp_peak_pct": 10.0,
+          "outage_days": [
+            "2018-08-25",
+            "2018-08-26",
+            "2018-08-27"
+          ],
+          "injected_ramp_kwh": 621.2,
+          "injected_outage_kwh": 600.0,
+          "injected_kwh": 1221.2
+        },
+        "estimated_after_injection": {
+          "lost_kwh": 1041.3,
+          "lost_kwh_ci": [
+            762.4,
+            1610.4
+          ],
+          "sustained_kwh": 445.2,
+          "outage_kwh": 596.1
+        },
+        "recovered_kwh": 1041.3,
+        "recovered_share_of_injected_pct": 85.3,
+        "injected_within_stated_range": true,
+        "outage_days_detected": "3 of 3",
+        "detection_limit_check": [
+          {
+            "window_days": 14,
+            "injected_step_pct": 2.03,
+            "multiple_of_stated_limit": 0.5,
+            "trials": 30,
+            "detected_share_pct": 27
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 4.06,
+            "multiple_of_stated_limit": 1.0,
+            "trials": 30,
+            "detected_share_pct": 80
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 6.09,
+            "multiple_of_stated_limit": 1.5,
+            "trials": 30,
+            "detected_share_pct": 93
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 8.11,
+            "multiple_of_stated_limit": 2.0,
+            "trials": 30,
+            "detected_share_pct": 97
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 10.14,
+            "multiple_of_stated_limit": 2.5,
+            "trials": 30,
+            "detected_share_pct": 100
+          },
+          {
+            "window_days": 14,
+            "injected_step_pct": 12.17,
+            "multiple_of_stated_limit": 3.0,
+            "trials": 30,
+            "detected_share_pct": 100
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 1.99,
+            "multiple_of_stated_limit": 0.5,
+            "trials": 30,
+            "detected_share_pct": 47
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 3.98,
+            "multiple_of_stated_limit": 1.0,
+            "trials": 30,
+            "detected_share_pct": 90
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 5.97,
+            "multiple_of_stated_limit": 1.5,
+            "trials": 30,
+            "detected_share_pct": 100
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 7.96,
+            "multiple_of_stated_limit": 2.0,
+            "trials": 30,
+            "detected_share_pct": 100
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 9.95,
+            "multiple_of_stated_limit": 2.5,
+            "trials": 30,
+            "detected_share_pct": 100
+          },
+          {
+            "window_days": 30,
+            "injected_step_pct": 11.94,
+            "multiple_of_stated_limit": 3.0,
+            "trials": 30,
+            "detected_share_pct": 100
+          }
+        ],
+        "reliable_detection": {
+          "14": {
+            "step_pct": 4.06,
+            "detected_share_pct": 80
+          },
+          "30": {
+            "step_pct": 3.98,
+            "detected_share_pct": 90
+          }
+        },
+        "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake"
+      }
+    }
+  ],
+  "systems": [
+    {
+      "system_id": "JAIPUR1",
+      "name": "Fitpack Textiles rooftop, Jaipur",
+      "data_label": "Public dataset: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)",
+      "status": "ok",
+      "period": {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "months": 12.0
+      },
+      "input_resolution": "daily",
+      "completeness": {
+        "period_start": "2022-01-01",
+        "period_end": "2022-12-31",
+        "calendar_days": 365,
+        "valid_days": 365,
+        "gap_days": 0,
+        "partial_days": 0,
+        "impossible_days": 0,
+        "completeness_pct": 100.0,
+        "counter_resets": 0,
+        "counter_unassignable_gaps": 0,
+        "impossible_interval_values": 0
+      },
+      "inferred_layout": [
+        "JAIPUR1_daily.csv: system JAIPUR1; time column 'Date'; interval_energy from ['Energy (kWh)'] in kWh; 1440-minute steps. system_id taken from the file name."
+      ],
+      "honest_gaps": [
+        "Tilt and azimuth are not provided by the data source. Daily mode does not use them (the seasonal reference absorbs the orientation), so no value was assumed.",
+        "Commissioning date is not provided by the data source; it is not used in any calculation.",
+        "Months with too few clear days for their own reference (borrowed from neighbouring months): [7, 8, 12]."
+      ],
+      "reference_method": {
+        "mode": "daily",
+        "description": "Daily mode. Daily horizontal irradiation × nameplate capacity × a temperature factor (-0.4%/°C, NOCT 45 °C cell-temperature rule). Performance index = measured ÷ modelled energy. The reference is the system's own 90th-percentile sustained (7-clear-day median) performance per calendar month, pooled over all years and reduced by the upward bias expected from noise. Clear day = all-sky ÷ clear-sky irradiation ≥ 0.85. Assumptions: constant inverter and wiring losses are absorbed by the reference; timestamps are local standard time; the cleanest state seen in each month is representative of a clean array.",
+        "monthly_reference": {
+          "1": 0.882,
+          "2": 0.8217,
+          "3": 0.8717,
+          "4": 0.8882,
+          "5": 0.7753,
+          "6": 0.7149,
+          "7": null,
+          "8": null,
+          "9": 0.8456,
+          "10": 0.8443,
+          "11": 0.8636,
+          "12": null
+        },
+        "monthly_clear_day_counts": {
+          "1": 19,
+          "2": 28,
+          "3": 31,
+          "4": 28,
+          "5": 29,
+          "6": 19,
+          "7": 1,
+          "8": 5,
+          "9": 20,
+          "10": 28,
+          "11": 29,
+          "12": 4
+        },
+        "months_without_own_reference": [
+          7,
+          8,
+          12
+        ],
+        "sustained_noise_fraction": 0.0352,
+        "luck_allowance_fraction": 0.0451
+      },
+      "estimated_loss": {
+        "loss_pct": 8.4305,
+        "loss_pct_range": [
+          6.53,
+          9.2463
+        ],
+        "lost_kwh": 14893.5532,
+        "lost_kwh_range": [
+          11232.4598,
+          16366.4575
+        ],
+        "of_which_sustained_shortfall_kwh": 2742.7329,
+        "sustained_shortfall_kwh_range": [
+          0.0,
+          4398.9497
+        ],
+        "sustained_part_deep_drop_kwh": 0.0,
+        "sustained_part_deep_drop_kwh_range": [
+          0.0,
+          187.2859
+        ],
+        "sustained_part_moderate_kwh": 2742.7329,
+        "sustained_part_moderate_kwh_range": [
+          0.0,
+          4315.1879
+        ],
+        "of_which_outage_days_kwh": 12150.8202,
+        "outage_days_kwh_range": [
+          10787.0681,
+          12454.4821
+        ],
+        "expected_kwh_over_valid_days": 176663.6193,
+        "valid_days_assessed": 365,
+        "confidence_level": 0.95,
+        "interval_method": "block bootstrap of clear-day residuals and of the reference",
+        "interval_note": null,
+        "shortfall_episodes": [
+          {
+            "start": "2022-05-09",
+            "end": "2022-06-17",
+            "days": 40,
+            "mean_shortfall_pct": 8.4,
+            "max_shortfall_pct": 11.3
+          },
+          {
+            "start": "2022-11-13",
+            "end": "2022-12-16",
+            "days": 34,
+            "mean_shortfall_pct": 9.7,
+            "max_shortfall_pct": 12.4
+          }
+        ]
+      },
+      "detection_limit": {
+        "statement": "losses below about 9.1% sustained over 14 days, or about 12.0% sustained over 30 days, cannot be distinguished from noise",
+        "day_to_day_sigma_fraction": 0.0674,
+        "clear_day_share": 0.753,
+        "false_alarm_rate": 0.01,
+        "power": 0.8,
+        "windows": {
+          "14": {
+            "se_fraction": 0.0286,
+            "threshold_fraction": 0.0666,
+            "limit_fraction": 0.0907
+          },
+          "30": {
+            "se_fraction": 0.0379,
+            "threshold_fraction": 0.0882,
+            "limit_fraction": 0.12
+          }
+        }
+      },
+      "cause_hypotheses": [
+        {
+          "cause": "outage or fault",
+          "status": "indicated",
+          "facts": [
+            "Output was near zero on 29 day(s) with good irradiance: 2022-09-22; 2022-09-26; 2022-12-05 to 2022-12-31 (27 days)."
+          ],
+          "hypothesis": "Near-zero days are consistent with an inverter trip, grid outage or a monitoring fault that recorded zeros. The data cannot tell these apart.",
+          "outage_days": 29,
+          "deep_shortfall_days": 0
+        },
+        {
+          "cause": "soiling",
+          "status": "not indicated",
+          "facts": [
+            "Between cleaning events, performance declined in 2 of 2 usable intervals, at a median of 0.232% per day in the declining ones.",
+            "1 of 7 testable natural rain event(s) were followed by a rise in normalised performance that is distinguishable from zero.",
+            "rdtools estimates a soiling loss of 5.3% (range 1.3–12.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)). Shuffle check: with the same clear-day values in random time order, which contain no soiling pattern, it reports 6.0–12.4%."
+          ],
+          "hypothesis": "No soiling distinguishable from scatter. The estimate of 5.3% (range 1.3–12.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)) is not clearly above what the same method reports on shuffled data (up to 12.4%), so most or all of it can be produced by day-to-day scatter alone.",
+          "numbers": {
+            "method": "rdtools 3.2.1 stochastic rate and recovery (SRR)",
+            "soiling_ratio": 0.947,
+            "soiling_ratio_ci": [
+              0.8791,
+              0.9871
+            ],
+            "soiling_loss_pct": 5.3,
+            "soiling_loss_pct_ci": [
+              1.29,
+              12.09
+            ],
+            "confidence": 0.95,
+            "shuffled_order_loss_pct": [
+              12.4,
+              6.04,
+              7.58
+            ]
+          }
+        },
+        {
+          "cause": "ageing or degradation",
+          "status": "insufficient data",
+          "hypothesis": null,
+          "facts": [
+            "Only 1.0 years of data; more than 2 years are needed to separate ageing from seasonal effects."
+          ]
+        },
+        {
+          "cause": "shading",
+          "status": "cannot be assessed",
+          "hypothesis": null,
+          "facts": [
+            "Cannot be assessed from daily data: shading shows as dips at fixed hours."
+          ]
+        }
+      ],
+      "recovery": {
+        "event_source": "natural rain event, not a maintenance intervention",
+        "events": [
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-01-08",
+            "start": "2022-01-07",
+            "end": "2022-01-08",
+            "note": "",
+            "clear_days_before": 4,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 34.7,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 1.0512,
+            "ratio_after": 0.991,
+            "change_pct": -5.72,
+            "change_pct_ci": [
+              -17.1,
+              6.77
+            ],
+            "change_kwh_per_day": -19.96,
+            "change_kwh_per_day_ci": [
+              -62.7,
+              21.48
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-01-01",
+              "2022-01-02",
+              "2022-01-03",
+              "2022-01-04"
+            ],
+            "after_days": [
+              "2022-01-10",
+              "2022-01-11",
+              "2022-01-13",
+              "2022-01-14",
+              "2022-01-18",
+              "2022-01-19",
+              "2022-01-20"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-01-22",
+            "start": "2022-01-22",
+            "end": "2022-01-22",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 13,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.6,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.991,
+            "ratio_after": 1.0065,
+            "change_pct": 1.57,
+            "change_pct_ci": [
+              -5.44,
+              12.31
+            ],
+            "change_kwh_per_day": 6.53,
+            "change_kwh_per_day_ci": [
+              -23.8,
+              46.88
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-01-10",
+              "2022-01-11",
+              "2022-01-13",
+              "2022-01-14",
+              "2022-01-18",
+              "2022-01-19",
+              "2022-01-20"
+            ],
+            "after_days": [
+              "2022-01-24",
+              "2022-01-25",
+              "2022-01-26",
+              "2022-01-27",
+              "2022-01-28",
+              "2022-01-29",
+              "2022-01-30",
+              "2022-01-31",
+              "2022-02-01",
+              "2022-02-02",
+              "2022-02-03",
+              "2022-02-04",
+              "2022-02-05"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-05-23",
+            "start": "2022-05-23",
+            "end": "2022-05-23",
+            "note": "",
+            "clear_days_before": 14,
+            "clear_days_after": 13,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.1,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.8755,
+            "ratio_after": 0.8805,
+            "change_pct": 0.57,
+            "change_pct_ci": [
+              -12.94,
+              17.21
+            ],
+            "change_kwh_per_day": 2.86,
+            "change_kwh_per_day_ci": [
+              -67.58,
+              77.06
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-05-09",
+              "2022-05-10",
+              "2022-05-11",
+              "2022-05-12",
+              "2022-05-13",
+              "2022-05-14",
+              "2022-05-15",
+              "2022-05-16",
+              "2022-05-17",
+              "2022-05-18",
+              "2022-05-19",
+              "2022-05-20",
+              "2022-05-21",
+              "2022-05-22"
+            ],
+            "after_days": [
+              "2022-05-24",
+              "2022-05-25",
+              "2022-05-26",
+              "2022-05-27",
+              "2022-05-28",
+              "2022-05-29",
+              "2022-05-30",
+              "2022-05-31",
+              "2022-06-01",
+              "2022-06-02",
+              "2022-06-03",
+              "2022-06-04",
+              "2022-06-05"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-06-19",
+            "start": "2022-06-18",
+            "end": "2022-06-19",
+            "note": "",
+            "clear_days_before": 8,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 43.4,
+            "other_heavy_rain_in_windows": 4,
+            "testable": true,
+            "ratio_before": 0.9158,
+            "ratio_after": 1.0428,
+            "change_pct": 13.87,
+            "change_pct_ci": [
+              5.98,
+              22.31
+            ],
+            "change_kwh_per_day": 58.44,
+            "change_kwh_per_day_ci": [
+              25.79,
+              90.34
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": true,
+            "before_days": [
+              "2022-06-04",
+              "2022-06-05",
+              "2022-06-08",
+              "2022-06-09",
+              "2022-06-10",
+              "2022-06-11",
+              "2022-06-16",
+              "2022-06-17"
+            ],
+            "after_days": [
+              "2022-06-21",
+              "2022-06-22",
+              "2022-06-23",
+              "2022-06-24",
+              "2022-06-25",
+              "2022-06-26",
+              "2022-06-27",
+              "2022-06-28"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-06-21",
+            "start": "2022-06-21",
+            "end": "2022-06-21",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 12.7,
+            "other_heavy_rain_in_windows": 5,
+            "testable": true,
+            "ratio_before": 0.9171,
+            "ratio_after": 0.9925,
+            "change_pct": 8.23,
+            "change_pct_ci": [
+              -5.53,
+              20.86
+            ],
+            "change_kwh_per_day": 34.31,
+            "change_kwh_per_day_ci": [
+              -23.82,
+              81.97
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-06-08",
+              "2022-06-09",
+              "2022-06-10",
+              "2022-06-11",
+              "2022-06-16",
+              "2022-06-17"
+            ],
+            "after_days": [
+              "2022-06-22",
+              "2022-06-23",
+              "2022-06-24",
+              "2022-06-25",
+              "2022-06-26",
+              "2022-06-27",
+              "2022-06-28",
+              "2022-07-04",
+              "2022-07-05"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-07-02",
+            "start": "2022-06-30",
+            "end": "2022-07-02",
+            "note": "",
+            "clear_days_before": 10,
+            "clear_days_after": 3,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 75.3,
+            "other_heavy_rain_in_windows": 5,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (10 before, 3 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-07-12",
+            "start": "2022-07-12",
+            "end": "2022-07-12",
+            "note": "",
+            "clear_days_before": 4,
+            "clear_days_after": 1,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.2,
+            "other_heavy_rain_in_windows": 9,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (4 before, 1 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-07-16",
+            "start": "2022-07-16",
+            "end": "2022-07-16",
+            "note": "",
+            "clear_days_before": 3,
+            "clear_days_after": 2,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 12.9,
+            "other_heavy_rain_in_windows": 8,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (3 before, 2 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-07-27",
+            "start": "2022-07-22",
+            "end": "2022-07-27",
+            "note": "",
+            "clear_days_before": 1,
+            "clear_days_after": 4,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 113.1,
+            "other_heavy_rain_in_windows": 4,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (1 before, 4 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-08-02",
+            "start": "2022-08-02",
+            "end": "2022-08-02",
+            "note": "",
+            "clear_days_before": 2,
+            "clear_days_after": 3,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 23.0,
+            "other_heavy_rain_in_windows": 9,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (2 before, 3 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-08-05",
+            "start": "2022-08-05",
+            "end": "2022-08-05",
+            "note": "",
+            "clear_days_before": 1,
+            "clear_days_after": 3,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.7,
+            "other_heavy_rain_in_windows": 9,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (1 before, 3 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-08-14",
+            "start": "2022-08-14",
+            "end": "2022-08-14",
+            "note": "",
+            "clear_days_before": 3,
+            "clear_days_after": 2,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 19.1,
+            "other_heavy_rain_in_windows": 4,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (3 before, 2 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-08-16",
+            "start": "2022-08-16",
+            "end": "2022-08-16",
+            "note": "",
+            "clear_days_before": 3,
+            "clear_days_after": 3,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 18.0,
+            "other_heavy_rain_in_windows": 4,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (3 before, 3 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-08-22",
+            "start": "2022-08-22",
+            "end": "2022-08-22",
+            "note": "",
+            "clear_days_before": 2,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 17.8,
+            "other_heavy_rain_in_windows": 2,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (2 before, 8 after)"
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-09-24",
+            "start": "2022-09-23",
+            "end": "2022-09-24",
+            "note": "",
+            "clear_days_before": 8,
+            "clear_days_after": 11,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 55.2,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 1.002,
+            "ratio_after": 0.9945,
+            "change_pct": -0.75,
+            "change_pct_ci": [
+              -8.89,
+              9.45
+            ],
+            "change_kwh_per_day": -3.53,
+            "change_kwh_per_day_ci": [
+              -44.98,
+              41.21
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-09-09",
+              "2022-09-10",
+              "2022-09-12",
+              "2022-09-16",
+              "2022-09-17",
+              "2022-09-18",
+              "2022-09-19",
+              "2022-09-20"
+            ],
+            "after_days": [
+              "2022-09-25",
+              "2022-09-27",
+              "2022-09-28",
+              "2022-09-29",
+              "2022-09-30",
+              "2022-10-01",
+              "2022-10-02",
+              "2022-10-03",
+              "2022-10-04",
+              "2022-10-05",
+              "2022-10-06"
+            ]
+          },
+          {
+            "system_id": "JAIPUR1",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2022-10-08",
+            "start": "2022-10-08",
+            "end": "2022-10-08",
+            "note": "",
+            "clear_days_before": 11,
+            "clear_days_after": 13,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 38.4,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9945,
+            "ratio_after": 1.0353,
+            "change_pct": 4.1,
+            "change_pct_ci": [
+              -0.29,
+              8.61
+            ],
+            "change_kwh_per_day": 19.86,
+            "change_kwh_per_day_ci": [
+              -1.47,
+              40.35
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2022-09-25",
+              "2022-09-27",
+              "2022-09-28",
+              "2022-09-29",
+              "2022-09-30",
+              "2022-10-01",
+              "2022-10-02",
+              "2022-10-03",
+              "2022-10-04",
+              "2022-10-05",
+              "2022-10-06"
+            ],
+            "after_days": [
+              "2022-10-10",
+              "2022-10-11",
+              "2022-10-12",
+              "2022-10-13",
+              "2022-10-14",
+              "2022-10-15",
+              "2022-10-16",
+              "2022-10-17",
+              "2022-10-18",
+              "2022-10-19",
+              "2022-10-20",
+              "2022-10-21",
+              "2022-10-22"
+            ]
+          }
+        ],
+        "clearest": {
+          "system_id": "JAIPUR1",
+          "type": "natural rain",
+          "label": "natural rain event, not a maintenance intervention",
+          "date": "2022-05-23",
+          "start": "2022-05-23",
+          "end": "2022-05-23",
+          "note": "",
+          "clear_days_before": 14,
+          "clear_days_after": 13,
+          "window_days": [
+            14,
+            14
+          ],
+          "rain_mm": 10.1,
+          "other_heavy_rain_in_windows": 0,
+          "testable": true,
+          "ratio_before": 0.8755,
+          "ratio_after": 0.8805,
+          "change_pct": 0.57,
+          "change_pct_ci": [
+            -12.94,
+            17.21
+          ],
+          "change_kwh_per_day": 2.86,
+          "change_kwh_per_day_ci": [
+            -67.58,
+            77.06
+          ],
+          "confidence": 0.95,
+          "distinguishable_from_zero": false,
+          "before_days": [
+            "2022-05-09",
+            "2022-05-10",
+            "2022-05-11",
+            "2022-05-12",
+            "2022-05-13",
+            "2022-05-14",
+            "2022-05-15",
+            "2022-05-16",
+            "2022-05-17",
+            "2022-05-18",
+            "2022-05-19",
+            "2022-05-20",
+            "2022-05-21",
+            "2022-05-22"
+          ],
+          "after_days": [
+            "2022-05-24",
+            "2022-05-25",
+            "2022-05-26",
+            "2022-05-27",
+            "2022-05-28",
+            "2022-05-29",
+            "2022-05-30",
+            "2022-05-31",
+            "2022-06-01",
+            "2022-06-02",
+            "2022-06-03",
+            "2022-06-04",
+            "2022-06-05"
+          ]
+        }
+      },
+      "rupee_value": {
+        "months": 12.0,
+        "note": "[not available: tariff_inr_per_kwh not provided in data/systems.csv]",
+        "verdict": "[not available: tariff_inr_per_kwh not provided]"
+      },
+      "verdict": "[not available: tariff_inr_per_kwh not provided]",
+      "emissions": {
+        "note": "[not available: emission_factor_kg_per_kwh is empty in config.yaml; no factor is assumed]"
+      }
+    },
+    {
+      "system_id": "1419",
+      "name": "Clark County-NV - Hollywood Rec Center",
+      "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake",
+      "status": "ok",
+      "period": {
+        "start": "2016-01-01",
+        "end": "2019-12-31",
+        "months": 48.0
+      },
+      "input_resolution": "hourly",
+      "completeness": {
+        "period_start": "2016-01-01",
+        "period_end": "2019-12-31",
+        "calendar_days": 1461,
+        "valid_days": 1267,
+        "gap_days": 186,
+        "partial_days": 3,
+        "impossible_days": 5,
+        "completeness_pct": 86.7,
+        "counter_resets": 6,
+        "counter_unassignable_gaps": 3,
+        "impossible_interval_values": 5
+      },
+      "inferred_layout": [
+        "pvdaq_system_1419.csv: system 1419; time column 'measured_on'; cumulative_counter from ['ac_kwhr_1_kwhac__4798', 'ac_kwhr_2_kwhac__4800'] in kWh; 15-minute steps. 2 counters (one per inverter) are summed. sampling interval varies: 15 min on 958 days, 5 min on 453 days."
+      ],
+      "honest_gaps": [
+        "188 day(s) in deep-drop episodes (part of the system off) are excluded from the recovery, soiling, ageing and shading tests, so those tests describe the system while it was otherwise working."
+      ],
+      "reference_method": {
+        "mode": "hourly (pvlib)",
+        "description": "Hourly mode. NASA POWER hourly global irradiance is split into beam and diffuse (Erbs), transposed to the array plane (Hay-Davies, pvlib) and converted to DC energy with a PVWatts model (temperature coefficient -0.4%/°C, NOCT 45 °C). Hourly values are summed to days. Performance index = measured ÷ modelled energy. The reference is the system's own 90th-percentile sustained (7-clear-day median) performance per calendar month, pooled over all years and reduced by the upward bias expected from noise. Clear day = all-sky ÷ clear-sky irradiation ≥ 0.85. Assumptions: constant inverter and wiring losses are absorbed by the reference; timestamps are local standard time; the cleanest state seen in each month is representative of a clean array.",
+        "monthly_reference": {
+          "1": 0.9052,
+          "2": 0.8824,
+          "3": 0.8694,
+          "4": 0.8655,
+          "5": 0.8775,
+          "6": 0.8725,
+          "7": 0.8802,
+          "8": 0.8804,
+          "9": 0.8683,
+          "10": 0.861,
+          "11": 0.8519,
+          "12": 0.8381
+        },
+        "monthly_clear_day_counts": {
+          "1": 48,
+          "2": 48,
+          "3": 64,
+          "4": 80,
+          "5": 82,
+          "6": 107,
+          "7": 95,
+          "8": 106,
+          "9": 101,
+          "10": 56,
+          "11": 69,
+          "12": 48
+        },
+        "months_without_own_reference": [],
+        "sustained_noise_fraction": 0.0216,
+        "luck_allowance_fraction": 0.0276
+      },
+      "estimated_loss": {
+        "loss_pct": 6.8351,
+        "loss_pct_range": [
+          6.4061,
+          7.3238
+        ],
+        "lost_kwh": 16616.0802,
+        "lost_kwh_range": [
+          15524.6791,
+          17838.0668
+        ],
+        "of_which_sustained_shortfall_kwh": 16616.0802,
+        "sustained_shortfall_kwh_range": [
+          15524.6791,
+          17838.0668
+        ],
+        "sustained_part_deep_drop_kwh": 15551.9938,
+        "sustained_part_deep_drop_kwh_range": [
+          14101.4672,
+          16172.7265
+        ],
+        "sustained_part_moderate_kwh": 1064.0864,
+        "sustained_part_moderate_kwh_range": [
+          996.6639,
+          2236.0892
+        ],
+        "of_which_outage_days_kwh": 0.0,
+        "outage_days_kwh_range": [
+          0.0,
+          0.0
+        ],
+        "expected_kwh_over_valid_days": 243099.556,
+        "valid_days_assessed": 1267,
+        "confidence_level": 0.95,
+        "interval_method": "block bootstrap of clear-day residuals and of the reference",
+        "interval_note": null,
+        "shortfall_episodes": [
+          {
+            "start": "2016-02-09",
+            "end": "2016-03-01",
+            "days": 22,
+            "mean_shortfall_pct": 34.5,
+            "max_shortfall_pct": 45.0
+          },
+          {
+            "start": "2016-08-31",
+            "end": "2016-10-18",
+            "days": 49,
+            "mean_shortfall_pct": 33.0,
+            "max_shortfall_pct": 45.3
+          },
+          {
+            "start": "2016-11-25",
+            "end": "2016-12-26",
+            "days": 32,
+            "mean_shortfall_pct": 3.4,
+            "max_shortfall_pct": 4.8
+          },
+          {
+            "start": "2017-07-21",
+            "end": "2017-09-08",
+            "days": 50,
+            "mean_shortfall_pct": 47.4,
+            "max_shortfall_pct": 54.0
+          },
+          {
+            "start": "2018-12-22",
+            "end": "2019-02-14",
+            "days": 55,
+            "mean_shortfall_pct": 3.6,
+            "max_shortfall_pct": 5.1
+          },
+          {
+            "start": "2019-03-02",
+            "end": "2019-04-16",
+            "days": 46,
+            "mean_shortfall_pct": 39.8,
+            "max_shortfall_pct": 45.2
+          },
+          {
+            "start": "2019-07-20",
+            "end": "2019-07-20",
+            "days": 1,
+            "mean_shortfall_pct": 0.1,
+            "max_shortfall_pct": 0.1
+          },
+          {
+            "start": "2019-07-25",
+            "end": "2019-08-20",
+            "days": 27,
+            "mean_shortfall_pct": 9.9,
+            "max_shortfall_pct": 45.6
+          },
+          {
+            "start": "2019-08-27",
+            "end": "2019-10-06",
+            "days": 41,
+            "mean_shortfall_pct": 25.3,
+            "max_shortfall_pct": 45.9
+          },
+          {
+            "start": "2019-11-08",
+            "end": "2019-12-09",
+            "days": 32,
+            "mean_shortfall_pct": 38.5,
+            "max_shortfall_pct": 48.6
+          }
+        ]
+      },
+      "detection_limit": {
+        "statement": "losses below about 5.1% sustained over 14 days, or about 4.0% sustained over 30 days, cannot be distinguished from noise",
+        "day_to_day_sigma_fraction": 0.0388,
+        "clear_day_share": 0.721,
+        "false_alarm_rate": 0.01,
+        "power": 0.8,
+        "windows": {
+          "14": {
+            "se_fraction": 0.0162,
+            "threshold_fraction": 0.0377,
+            "limit_fraction": 0.0513
+          },
+          "30": {
+            "se_fraction": 0.0117,
+            "threshold_fraction": 0.03,
+            "limit_fraction": 0.0398
+          }
+        },
+        "daily_mode_cross_check": {
+          "day_to_day_sigma_fraction": 0.041,
+          "windows": {
+            "14": {
+              "se_fraction": 0.0191,
+              "threshold_fraction": 0.0444,
+              "limit_fraction": 0.0604
+            },
+            "30": {
+              "se_fraction": 0.021,
+              "threshold_fraction": 0.0488,
+              "limit_fraction": 0.0664
+            }
+          }
+        }
+      },
+      "cause_hypotheses": [
+        {
+          "cause": "outage or fault",
+          "status": "indicated",
+          "facts": [
+            "No day with good irradiance had near-zero output.",
+            "186 day(s) have no usable generation data (nothing logged, or a reading missing from at least one inverter); whether the system produced on those days is unknown and they are not counted as loss.",
+            "Sustained output was more than 25% below the reference on 188 day(s) (median level 55% of reference): 2016-02-12 to 2016-02-27 (16 days); 2016-09-05 to 2016-10-08 (34 days); 2017-07-25 to 2017-09-07 (45 days); 2019-03-05 to 2019-04-14 (41 days); 2019-07-28 to 2019-07-31 (4 days); 2019-09-02 to 2019-09-10 (9 days); 2019-09-20 to 2019-10-03 (14 days); 2019-11-08 to 2019-12-02 (25 days). This accounts for 15,552 kWh of the sustained shortfall."
+          ],
+          "hypothesis": "The deep sustained drop is consistent with part of the system being off (one inverter, string or meter channel), which is too large and too abrupt for soiling.",
+          "outage_days": 0,
+          "deep_shortfall_days": 188
+        },
+        {
+          "cause": "soiling",
+          "status": "not indicated",
+          "facts": [
+            "Between cleaning events, performance declined in 12 of 12 usable intervals, at a median of 0.349% per day in the declining ones.",
+            "0 of 9 testable natural rain event(s) were followed by a rise in normalised performance that is distinguishable from zero.",
+            "rdtools estimates a soiling loss of 5.9% (range 3.3–9.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)). Shuffle check: with the same clear-day values in random time order, which contain no soiling pattern, it reports 2.7–5.1%."
+          ],
+          "hypothesis": "No soiling distinguishable from scatter. The estimate of 5.9% (range 3.3–9.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)) is not clearly above what the same method reports on shuffled data (up to 5.1%), so most or all of it can be produced by day-to-day scatter alone.",
+          "numbers": {
+            "method": "rdtools 3.2.1 stochastic rate and recovery (SRR)",
+            "soiling_ratio": 0.9413,
+            "soiling_ratio_ci": [
+              0.9093,
+              0.9667
+            ],
+            "soiling_loss_pct": 5.87,
+            "soiling_loss_pct_ci": [
+              3.33,
+              9.07
+            ],
+            "confidence": 0.95,
+            "shuffled_order_loss_pct": [
+              5.08,
+              4.71,
+              2.65
+            ]
+          }
+        },
+        {
+          "cause": "ageing or degradation",
+          "status": "not indicated",
+          "facts": [
+            "Year-on-year change of clear-day performance over 4.0 years: -0.44% per year (range -1.00 to +0.13% per year, rdtools 3.2.1 year-on-year)."
+          ],
+          "hypothesis": "No ageing trend distinguishable from zero: the range includes zero or is positive.",
+          "numbers": {
+            "rate_pct_per_year": -0.44,
+            "rate_pct_per_year_ci": [
+              -1.0,
+              0.13
+            ],
+            "method": "rdtools 3.2.1 year-on-year",
+            "confidence": 0.95
+          }
+        },
+        {
+          "cause": "shading",
+          "status": "cannot be assessed",
+          "facts": [
+            "Clock check: on clear days the measured daily profile is centred +51 minutes from the modelled one (+57 min in May-August, +8 min in November-February).",
+            "The timestamps do not line up with solar time well enough for an hour-by-hour test (the summer-winter difference suggests the logger follows daylight-saving time)."
+          ],
+          "numbers": {
+            "clock_offset_minutes": 51,
+            "summer_offset_minutes": 57,
+            "winter_offset_minutes": 8
+          },
+          "hypothesis": null
+        }
+      ],
+      "recovery": {
+        "event_source": "natural rain event, not a maintenance intervention",
+        "events": [
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-01-05",
+            "start": "2016-01-05",
+            "end": "2016-01-05",
+            "note": "",
+            "clear_days_before": 1,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.0,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (1 before, 8 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-04-09",
+            "start": "2016-04-09",
+            "end": "2016-04-09",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 11,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 16.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.0407,
+            "ratio_after": 1.0368,
+            "change_pct": -0.37,
+            "change_pct_ci": [
+              -4.55,
+              3.65
+            ],
+            "change_kwh_per_day": -0.82,
+            "change_kwh_per_day_ci": [
+              -10.52,
+              7.99
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-03-26",
+              "2016-03-31",
+              "2016-04-01",
+              "2016-04-02",
+              "2016-04-03",
+              "2016-04-04",
+              "2016-04-05"
+            ],
+            "after_days": [
+              "2016-04-12",
+              "2016-04-13",
+              "2016-04-14",
+              "2016-04-16",
+              "2016-04-17",
+              "2016-04-18",
+              "2016-04-19",
+              "2016-04-20",
+              "2016-04-21",
+              "2016-04-22",
+              "2016-04-23"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-22",
+            "start": "2016-12-22",
+            "end": "2016-12-22",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 17.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9621,
+            "ratio_after": 0.9899,
+            "change_pct": 2.88,
+            "change_pct_ci": [
+              -4.98,
+              11.83
+            ],
+            "change_kwh_per_day": 2.76,
+            "change_kwh_per_day_ci": [
+              -4.85,
+              11.17
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-08",
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-24",
+            "start": "2016-12-24",
+            "end": "2016-12-24",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9638,
+            "ratio_after": 0.9884,
+            "change_pct": 2.56,
+            "change_pct_ci": [
+              -4.64,
+              10.65
+            ],
+            "change_kwh_per_day": 2.47,
+            "change_kwh_per_day_ci": [
+              -4.62,
+              9.99
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01",
+              "2017-01-06"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-01-22",
+            "start": "2017-01-22",
+            "end": "2017-01-22",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 10,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9855,
+            "ratio_after": 1.0394,
+            "change_pct": 5.47,
+            "change_pct_ci": [
+              -0.95,
+              11.41
+            ],
+            "change_kwh_per_day": 6.6,
+            "change_kwh_per_day_ci": [
+              -1.21,
+              13.23
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-01-11",
+              "2017-01-15",
+              "2017-01-16",
+              "2017-01-17",
+              "2017-01-18",
+              "2017-01-21"
+            ],
+            "after_days": [
+              "2017-01-24",
+              "2017-01-25",
+              "2017-01-26",
+              "2017-01-27",
+              "2017-01-28",
+              "2017-01-29",
+              "2017-01-30",
+              "2017-01-31",
+              "2017-02-01",
+              "2017-02-04"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-02-18",
+            "start": "2017-02-18",
+            "end": "2017-02-18",
+            "note": "",
+            "clear_days_before": 4,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.6,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.0179,
+            "ratio_after": 1.0192,
+            "change_pct": 0.13,
+            "change_pct_ci": [
+              -6.0,
+              7.42
+            ],
+            "change_kwh_per_day": 0.19,
+            "change_kwh_per_day_ci": [
+              -9.34,
+              10.22
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-02-04",
+              "2017-02-13",
+              "2017-02-14",
+              "2017-02-15"
+            ],
+            "after_days": [
+              "2017-02-22",
+              "2017-02-23",
+              "2017-02-24",
+              "2017-02-26",
+              "2017-02-28",
+              "2017-03-01",
+              "2017-03-02",
+              "2017-03-03"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-07-25",
+            "start": "2017-07-25",
+            "end": "2017-07-25",
+            "note": "",
+            "clear_days_before": 9,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (9 before, 0 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-09-09",
+            "start": "2017-09-09",
+            "end": "2017-09-09",
+            "note": "",
+            "clear_days_before": 0,
+            "clear_days_after": 12,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (0 before, 12 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2018-01-09",
+            "start": "2018-01-09",
+            "end": "2018-01-09",
+            "note": "",
+            "clear_days_before": 0,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 30.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (0 before, 0 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-01-15",
+            "start": "2019-01-15",
+            "end": "2019-01-15",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9628,
+            "ratio_after": 0.9508,
+            "change_pct": -1.25,
+            "change_pct_ci": [
+              -4.95,
+              1.59
+            ],
+            "change_kwh_per_day": -1.46,
+            "change_kwh_per_day_ci": [
+              -5.84,
+              1.84
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-01",
+              "2019-01-02",
+              "2019-01-03",
+              "2019-01-04",
+              "2019-01-09",
+              "2019-01-10",
+              "2019-01-13"
+            ],
+            "after_days": [
+              "2019-01-18",
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-02",
+            "start": "2019-02-02",
+            "end": "2019-02-02",
+            "note": "",
+            "clear_days_before": 10,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9446,
+            "ratio_after": 0.9386,
+            "change_pct": -0.64,
+            "change_pct_ci": [
+              -11.67,
+              9.47
+            ],
+            "change_kwh_per_day": -0.81,
+            "change_kwh_per_day_ci": [
+              -14.83,
+              11.91
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28",
+              "2019-01-30",
+              "2019-02-01"
+            ],
+            "after_days": [
+              "2019-02-06",
+              "2019-02-07",
+              "2019-02-08",
+              "2019-02-11",
+              "2019-02-15",
+              "2019-02-16"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-14",
+            "start": "2019-02-14",
+            "end": "2019-02-14",
+            "note": "",
+            "clear_days_before": 5,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 29.8,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9765,
+            "ratio_after": 0.9805,
+            "change_pct": 0.41,
+            "change_pct_ci": [
+              -9.34,
+              10.55
+            ],
+            "change_kwh_per_day": 0.57,
+            "change_kwh_per_day_ci": [
+              -13.52,
+              13.86
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-02-01",
+              "2019-02-06",
+              "2019-02-07",
+              "2019-02-08",
+              "2019-02-11"
+            ],
+            "after_days": [
+              "2019-02-15",
+              "2019-02-16",
+              "2019-02-19",
+              "2019-02-22",
+              "2019-02-23",
+              "2019-02-24",
+              "2019-02-25",
+              "2019-02-27",
+              "2019-02-28"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-03-06",
+            "start": "2019-03-06",
+            "end": "2019-03-06",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.7,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (7 before, 0 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-05-09",
+            "start": "2019-05-09",
+            "end": "2019-05-09",
+            "note": "",
+            "clear_days_before": 11,
+            "clear_days_after": 5,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 13.3,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.002,
+            "ratio_after": 1.0032,
+            "change_pct": 0.13,
+            "change_pct_ci": [
+              -5.13,
+              6.2
+            ],
+            "change_kwh_per_day": 0.28,
+            "change_kwh_per_day_ci": [
+              -11.66,
+              13.33
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-04-25",
+              "2019-04-26",
+              "2019-04-27",
+              "2019-04-28",
+              "2019-05-01",
+              "2019-05-02",
+              "2019-05-03",
+              "2019-05-04",
+              "2019-05-05",
+              "2019-05-06",
+              "2019-05-08"
+            ],
+            "after_days": [
+              "2019-05-11",
+              "2019-05-12",
+              "2019-05-13",
+              "2019-05-14",
+              "2019-05-18"
+            ]
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-20",
+            "start": "2019-11-19",
+            "end": "2019-11-20",
+            "note": "",
+            "clear_days_before": 2,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 35.7,
+            "other_heavy_rain_in_windows": 2,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (2 before, 0 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-28",
+            "start": "2019-11-28",
+            "end": "2019-11-28",
+            "note": "",
+            "clear_days_before": 0,
+            "clear_days_after": 4,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.2,
+            "other_heavy_rain_in_windows": 3,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (0 before, 4 after)"
+          },
+          {
+            "system_id": "1419",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-12-04",
+            "start": "2019-12-04",
+            "end": "2019-12-04",
+            "note": "",
+            "clear_days_before": 0,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 12.8,
+            "other_heavy_rain_in_windows": 2,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (0 before, 7 after)"
+          }
+        ],
+        "clearest": {
+          "system_id": "1419",
+          "type": "natural rain",
+          "label": "natural rain event, not a maintenance intervention",
+          "date": "2019-01-15",
+          "start": "2019-01-15",
+          "end": "2019-01-15",
+          "note": "",
+          "clear_days_before": 7,
+          "clear_days_after": 9,
+          "window_days": [
+            14,
+            14
+          ],
+          "rain_mm": 10.5,
+          "other_heavy_rain_in_windows": 0,
+          "testable": true,
+          "ratio_before": 0.9628,
+          "ratio_after": 0.9508,
+          "change_pct": -1.25,
+          "change_pct_ci": [
+            -4.95,
+            1.59
+          ],
+          "change_kwh_per_day": -1.46,
+          "change_kwh_per_day_ci": [
+            -5.84,
+            1.84
+          ],
+          "confidence": 0.95,
+          "distinguishable_from_zero": false,
+          "before_days": [
+            "2019-01-01",
+            "2019-01-02",
+            "2019-01-03",
+            "2019-01-04",
+            "2019-01-09",
+            "2019-01-10",
+            "2019-01-13"
+          ],
+          "after_days": [
+            "2019-01-18",
+            "2019-01-19",
+            "2019-01-22",
+            "2019-01-23",
+            "2019-01-24",
+            "2019-01-25",
+            "2019-01-26",
+            "2019-01-27",
+            "2019-01-28"
+          ]
+        }
+      },
+      "rupee_value": {
+        "months": 48.0,
+        "note": "[not available: tariff_inr_per_kwh not provided in data/systems.csv]",
+        "verdict": "[not available: tariff_inr_per_kwh not provided]"
+      },
+      "verdict": "[not available: tariff_inr_per_kwh not provided]",
+      "emissions": {
+        "note": "[not available: emission_factor_kg_per_kwh is empty in config.yaml; no factor is assumed]"
+      }
+    },
+    {
+      "system_id": "1420",
+      "name": "Clark County-NV - Government Center",
+      "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake",
+      "status": "ok",
+      "period": {
+        "start": "2016-01-01",
+        "end": "2019-12-31",
+        "months": 48.0
+      },
+      "input_resolution": "hourly",
+      "completeness": {
+        "period_start": "2016-01-01",
+        "period_end": "2019-12-31",
+        "calendar_days": 1461,
+        "valid_days": 1455,
+        "gap_days": 2,
+        "partial_days": 0,
+        "impossible_days": 4,
+        "completeness_pct": 99.6,
+        "counter_resets": 0,
+        "counter_unassignable_gaps": 2,
+        "impossible_interval_values": 5
+      },
+      "inferred_layout": [
+        "pvdaq_system_1420.csv: system 1420; time column 'measured_on'; cumulative_counter from ['ac_kwhr_kwhac__4813'] in kWh; 15-minute steps. sampling interval varies: 15 min on 1008 days, 5 min on 451 days."
+      ],
+      "honest_gaps": [],
+      "reference_method": {
+        "mode": "hourly (pvlib)",
+        "description": "Hourly mode. NASA POWER hourly global irradiance is split into beam and diffuse (Erbs), transposed to the array plane (Hay-Davies, pvlib) and converted to DC energy with a PVWatts model (temperature coefficient -0.4%/°C, NOCT 45 °C). Hourly values are summed to days. Performance index = measured ÷ modelled energy. The reference is the system's own 90th-percentile sustained (7-clear-day median) performance per calendar month, pooled over all years and reduced by the upward bias expected from noise. Clear day = all-sky ÷ clear-sky irradiation ≥ 0.85. Assumptions: constant inverter and wiring losses are absorbed by the reference; timestamps are local standard time; the cleanest state seen in each month is representative of a clean array.",
+        "monthly_reference": {
+          "1": 0.9994,
+          "2": 0.9986,
+          "3": 0.9888,
+          "4": 1.0048,
+          "5": 1.0269,
+          "6": 1.0059,
+          "7": 1.0382,
+          "8": 1.0195,
+          "9": 0.9974,
+          "10": 0.9578,
+          "11": 0.9336,
+          "12": 0.8949
+        },
+        "monthly_clear_day_counts": {
+          "1": 67,
+          "2": 69,
+          "3": 77,
+          "4": 80,
+          "5": 83,
+          "6": 106,
+          "7": 95,
+          "8": 106,
+          "9": 104,
+          "10": 106,
+          "11": 90,
+          "12": 71
+        },
+        "months_without_own_reference": [],
+        "sustained_noise_fraction": 0.0146,
+        "luck_allowance_fraction": 0.0187
+      },
+      "estimated_loss": {
+        "loss_pct": 1.2087,
+        "loss_pct_range": [
+          0.6135,
+          1.8892
+        ],
+        "lost_kwh": 2849.4876,
+        "lost_kwh_range": [
+          1438.302,
+          4483.9766
+        ],
+        "of_which_sustained_shortfall_kwh": 2849.4876,
+        "sustained_shortfall_kwh_range": [
+          1438.302,
+          4483.9766
+        ],
+        "sustained_part_deep_drop_kwh": 0.0,
+        "sustained_part_deep_drop_kwh_range": [
+          0.0,
+          0.0
+        ],
+        "sustained_part_moderate_kwh": 2849.4876,
+        "sustained_part_moderate_kwh_range": [
+          1438.302,
+          4483.9766
+        ],
+        "of_which_outage_days_kwh": 0.0,
+        "outage_days_kwh_range": [
+          0.0,
+          0.0
+        ],
+        "expected_kwh_over_valid_days": 235741.1998,
+        "valid_days_assessed": 1455,
+        "confidence_level": 0.95,
+        "interval_method": "block bootstrap of clear-day residuals and of the reference",
+        "interval_note": null,
+        "shortfall_episodes": [
+          {
+            "start": "2016-01-01",
+            "end": "2016-02-04",
+            "days": 35,
+            "mean_shortfall_pct": 4.4,
+            "max_shortfall_pct": 6.7
+          },
+          {
+            "start": "2016-06-17",
+            "end": "2016-08-21",
+            "days": 66,
+            "mean_shortfall_pct": 3.0,
+            "max_shortfall_pct": 6.2
+          },
+          {
+            "start": "2016-08-28",
+            "end": "2016-10-27",
+            "days": 61,
+            "mean_shortfall_pct": 2.4,
+            "max_shortfall_pct": 4.0
+          },
+          {
+            "start": "2016-11-14",
+            "end": "2017-01-04",
+            "days": 52,
+            "mean_shortfall_pct": 4.7,
+            "max_shortfall_pct": 8.1
+          },
+          {
+            "start": "2017-01-08",
+            "end": "2017-01-16",
+            "days": 9,
+            "mean_shortfall_pct": 4.7,
+            "max_shortfall_pct": 7.2
+          },
+          {
+            "start": "2017-03-11",
+            "end": "2017-07-24",
+            "days": 136,
+            "mean_shortfall_pct": 2.7,
+            "max_shortfall_pct": 4.4
+          },
+          {
+            "start": "2017-10-29",
+            "end": "2018-02-24",
+            "days": 119,
+            "mean_shortfall_pct": 4.1,
+            "max_shortfall_pct": 7.7
+          },
+          {
+            "start": "2018-12-09",
+            "end": "2019-02-14",
+            "days": 68,
+            "mean_shortfall_pct": 6.4,
+            "max_shortfall_pct": 10.2
+          },
+          {
+            "start": "2019-12-13",
+            "end": "2019-12-31",
+            "days": 19,
+            "mean_shortfall_pct": 4.3,
+            "max_shortfall_pct": 5.6
+          }
+        ]
+      },
+      "detection_limit": {
+        "statement": "losses below about 4.1% sustained over 14 days, or about 4.0% sustained over 30 days, cannot be distinguished from noise",
+        "day_to_day_sigma_fraction": 0.0297,
+        "clear_day_share": 0.724,
+        "false_alarm_rate": 0.01,
+        "power": 0.8,
+        "windows": {
+          "14": {
+            "se_fraction": 0.0126,
+            "threshold_fraction": 0.03,
+            "limit_fraction": 0.0406
+          },
+          "30": {
+            "se_fraction": 0.0117,
+            "threshold_fraction": 0.03,
+            "limit_fraction": 0.0398
+          }
+        },
+        "daily_mode_cross_check": {
+          "day_to_day_sigma_fraction": 0.0303,
+          "windows": {
+            "14": {
+              "se_fraction": 0.0131,
+              "threshold_fraction": 0.0305,
+              "limit_fraction": 0.0415
+            },
+            "30": {
+              "se_fraction": 0.0137,
+              "threshold_fraction": 0.0319,
+              "limit_fraction": 0.0435
+            }
+          }
+        }
+      },
+      "cause_hypotheses": [
+        {
+          "cause": "outage or fault",
+          "status": "not indicated",
+          "facts": [
+            "No day with good irradiance had near-zero output.",
+            "2 day(s) have no usable generation data (nothing logged, or a reading missing from at least one inverter); whether the system produced on those days is unknown and they are not counted as loss."
+          ],
+          "hypothesis": null,
+          "outage_days": 0,
+          "deep_shortfall_days": 0
+        },
+        {
+          "cause": "soiling",
+          "status": "not indicated",
+          "facts": [
+            "Between cleaning events, performance declined in 22 of 22 usable intervals, at a median of 0.179% per day in the declining ones.",
+            "0 of 16 testable natural rain event(s) were followed by a rise in normalised performance that is distinguishable from zero.",
+            "rdtools estimates a soiling loss of 4.2% (range 2.9–6.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)). Shuffle check: with the same clear-day values in random time order, which contain no soiling pattern, it reports 3.8–4.6%."
+          ],
+          "hypothesis": "No soiling distinguishable from scatter. The estimate of 4.2% (range 2.9–6.1%, rdtools 3.2.1 stochastic rate and recovery (SRR)) is not clearly above what the same method reports on shuffled data (up to 4.6%), so most or all of it can be produced by day-to-day scatter alone.",
+          "numbers": {
+            "method": "rdtools 3.2.1 stochastic rate and recovery (SRR)",
+            "soiling_ratio": 0.9575,
+            "soiling_ratio_ci": [
+              0.939,
+              0.9708
+            ],
+            "soiling_loss_pct": 4.25,
+            "soiling_loss_pct_ci": [
+              2.92,
+              6.1
+            ],
+            "confidence": 0.95,
+            "shuffled_order_loss_pct": [
+              4.22,
+              3.83,
+              4.63
+            ]
+          }
+        },
+        {
+          "cause": "ageing or degradation",
+          "status": "not indicated",
+          "facts": [
+            "Year-on-year change of clear-day performance over 4.0 years: +0.18% per year (range -0.31 to +0.59% per year, rdtools 3.2.1 year-on-year)."
+          ],
+          "hypothesis": "No ageing trend distinguishable from zero: the range includes zero or is positive.",
+          "numbers": {
+            "rate_pct_per_year": 0.18,
+            "rate_pct_per_year_ci": [
+              -0.31,
+              0.59
+            ],
+            "method": "rdtools 3.2.1 year-on-year",
+            "confidence": 0.95
+          }
+        },
+        {
+          "cause": "shading",
+          "status": "cannot be assessed",
+          "facts": [
+            "Clock check: on clear days the measured daily profile is centred +37 minutes from the modelled one (+44 min in May-August, -6 min in November-February).",
+            "The timestamps do not line up with solar time well enough for an hour-by-hour test (the summer-winter difference suggests the logger follows daylight-saving time)."
+          ],
+          "numbers": {
+            "clock_offset_minutes": 37,
+            "summer_offset_minutes": 44,
+            "winter_offset_minutes": -6
+          },
+          "hypothesis": null
+        }
+      ],
+      "recovery": {
+        "event_source": "natural rain event, not a maintenance intervention",
+        "events": [
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-01-05",
+            "start": "2016-01-05",
+            "end": "2016-01-05",
+            "note": "",
+            "clear_days_before": 1,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.0,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (1 before, 7 after)"
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-04-09",
+            "start": "2016-04-09",
+            "end": "2016-04-09",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 11,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 16.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.99,
+            "ratio_after": 1.0071,
+            "change_pct": 1.72,
+            "change_pct_ci": [
+              -3.14,
+              6.44
+            ],
+            "change_kwh_per_day": 3.18,
+            "change_kwh_per_day_ci": [
+              -5.93,
+              11.6
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-03-26",
+              "2016-03-31",
+              "2016-04-01",
+              "2016-04-02",
+              "2016-04-03",
+              "2016-04-04",
+              "2016-04-05"
+            ],
+            "after_days": [
+              "2016-04-12",
+              "2016-04-13",
+              "2016-04-14",
+              "2016-04-16",
+              "2016-04-17",
+              "2016-04-18",
+              "2016-04-19",
+              "2016-04-20",
+              "2016-04-21",
+              "2016-04-22",
+              "2016-04-23"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-22",
+            "start": "2016-12-22",
+            "end": "2016-12-22",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 17.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.94,
+            "ratio_after": 0.9771,
+            "change_pct": 3.95,
+            "change_pct_ci": [
+              -3.79,
+              13.24
+            ],
+            "change_kwh_per_day": 3.06,
+            "change_kwh_per_day_ci": [
+              -3.12,
+              10.0
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-08",
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-24",
+            "start": "2016-12-24",
+            "end": "2016-12-24",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9435,
+            "ratio_after": 0.9691,
+            "change_pct": 2.71,
+            "change_pct_ci": [
+              -5.39,
+              11.33
+            ],
+            "change_kwh_per_day": 2.11,
+            "change_kwh_per_day_ci": [
+              -4.4,
+              8.6
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01",
+              "2017-01-06"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-01-22",
+            "start": "2017-01-22",
+            "end": "2017-01-22",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 10,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9874,
+            "ratio_after": 1.0183,
+            "change_pct": 3.13,
+            "change_pct_ci": [
+              -4.69,
+              11.74
+            ],
+            "change_kwh_per_day": 3.22,
+            "change_kwh_per_day_ci": [
+              -5.22,
+              11.35
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-01-11",
+              "2017-01-15",
+              "2017-01-16",
+              "2017-01-17",
+              "2017-01-18",
+              "2017-01-21"
+            ],
+            "after_days": [
+              "2017-01-24",
+              "2017-01-25",
+              "2017-01-26",
+              "2017-01-27",
+              "2017-01-28",
+              "2017-01-29",
+              "2017-01-30",
+              "2017-01-31",
+              "2017-02-01",
+              "2017-02-04"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-02-18",
+            "start": "2017-02-18",
+            "end": "2017-02-18",
+            "note": "",
+            "clear_days_before": 4,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.6,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9948,
+            "ratio_after": 0.9944,
+            "change_pct": -0.04,
+            "change_pct_ci": [
+              -6.11,
+              7.7
+            ],
+            "change_kwh_per_day": -0.05,
+            "change_kwh_per_day_ci": [
+              -8.03,
+              8.95
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-02-04",
+              "2017-02-13",
+              "2017-02-14",
+              "2017-02-15"
+            ],
+            "after_days": [
+              "2017-02-22",
+              "2017-02-23",
+              "2017-02-24",
+              "2017-02-26",
+              "2017-02-28",
+              "2017-03-01",
+              "2017-03-02",
+              "2017-03-03"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-07-25",
+            "start": "2017-07-25",
+            "end": "2017-07-25",
+            "note": "",
+            "clear_days_before": 9,
+            "clear_days_after": 10,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9699,
+            "ratio_after": 1.0083,
+            "change_pct": 3.97,
+            "change_pct_ci": [
+              -2.48,
+              10.28
+            ],
+            "change_kwh_per_day": 7.22,
+            "change_kwh_per_day_ci": [
+              -4.64,
+              18.05
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-07-13",
+              "2017-07-14",
+              "2017-07-15",
+              "2017-07-16",
+              "2017-07-17",
+              "2017-07-18",
+              "2017-07-21",
+              "2017-07-22",
+              "2017-07-23"
+            ],
+            "after_days": [
+              "2017-07-27",
+              "2017-07-28",
+              "2017-07-29",
+              "2017-07-30",
+              "2017-07-31",
+              "2017-08-01",
+              "2017-08-02",
+              "2017-08-05",
+              "2017-08-07",
+              "2017-08-08"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-09-09",
+            "start": "2017-09-09",
+            "end": "2017-09-09",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 12,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9827,
+            "ratio_after": 1.0245,
+            "change_pct": 4.25,
+            "change_pct_ci": [
+              -5.63,
+              17.15
+            ],
+            "change_kwh_per_day": 6.91,
+            "change_kwh_per_day_ci": [
+              -9.98,
+              25.05
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-08-26",
+              "2017-08-31",
+              "2017-09-01",
+              "2017-09-02",
+              "2017-09-03",
+              "2017-09-04",
+              "2017-09-07"
+            ],
+            "after_days": [
+              "2017-09-10",
+              "2017-09-11",
+              "2017-09-12",
+              "2017-09-14",
+              "2017-09-15",
+              "2017-09-16",
+              "2017-09-17",
+              "2017-09-18",
+              "2017-09-19",
+              "2017-09-20",
+              "2017-09-21",
+              "2017-09-22"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2018-01-09",
+            "start": "2018-01-09",
+            "end": "2018-01-09",
+            "note": "",
+            "clear_days_before": 8,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 30.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9481,
+            "ratio_after": 0.9493,
+            "change_pct": 0.13,
+            "change_pct_ci": [
+              -5.74,
+              7.32
+            ],
+            "change_kwh_per_day": 0.12,
+            "change_kwh_per_day_ci": [
+              -5.43,
+              6.42
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-12-27",
+              "2017-12-28",
+              "2017-12-29",
+              "2017-12-31",
+              "2018-01-03",
+              "2018-01-04",
+              "2018-01-05",
+              "2018-01-07"
+            ],
+            "after_days": [
+              "2018-01-10",
+              "2018-01-11",
+              "2018-01-12",
+              "2018-01-13",
+              "2018-01-14",
+              "2018-01-15",
+              "2018-01-21",
+              "2018-01-22",
+              "2018-01-23"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-01-15",
+            "start": "2019-01-15",
+            "end": "2019-01-15",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9076,
+            "ratio_after": 0.9303,
+            "change_pct": 2.49,
+            "change_pct_ci": [
+              -1.49,
+              6.0
+            ],
+            "change_kwh_per_day": 2.32,
+            "change_kwh_per_day_ci": [
+              -1.42,
+              5.48
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-01",
+              "2019-01-02",
+              "2019-01-03",
+              "2019-01-04",
+              "2019-01-09",
+              "2019-01-10",
+              "2019-01-13"
+            ],
+            "after_days": [
+              "2019-01-18",
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-02",
+            "start": "2019-02-02",
+            "end": "2019-02-02",
+            "note": "",
+            "clear_days_before": 10,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9294,
+            "ratio_after": 0.9425,
+            "change_pct": 1.42,
+            "change_pct_ci": [
+              -8.98,
+              11.62
+            ],
+            "change_kwh_per_day": 1.52,
+            "change_kwh_per_day_ci": [
+              -9.77,
+              12.41
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28",
+              "2019-01-30",
+              "2019-02-01"
+            ],
+            "after_days": [
+              "2019-02-06",
+              "2019-02-07",
+              "2019-02-08",
+              "2019-02-11",
+              "2019-02-15",
+              "2019-02-16"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-14",
+            "start": "2019-02-14",
+            "end": "2019-02-14",
+            "note": "",
+            "clear_days_before": 5,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 29.8,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.979,
+            "ratio_after": 0.9834,
+            "change_pct": 0.45,
+            "change_pct_ci": [
+              -9.64,
+              12.15
+            ],
+            "change_kwh_per_day": 0.54,
+            "change_kwh_per_day_ci": [
+              -12.22,
+              14.12
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-02-01",
+              "2019-02-06",
+              "2019-02-07",
+              "2019-02-08",
+              "2019-02-11"
+            ],
+            "after_days": [
+              "2019-02-15",
+              "2019-02-16",
+              "2019-02-19",
+              "2019-02-22",
+              "2019-02-23",
+              "2019-02-24",
+              "2019-02-25",
+              "2019-02-27",
+              "2019-02-28"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-03-06",
+            "start": "2019-03-06",
+            "end": "2019-03-06",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.7,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.029,
+            "ratio_after": 1.0407,
+            "change_pct": 1.14,
+            "change_pct_ci": [
+              -6.25,
+              10.36
+            ],
+            "change_kwh_per_day": 1.69,
+            "change_kwh_per_day_ci": [
+              -9.76,
+              14.38
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-02-22",
+              "2019-02-23",
+              "2019-02-24",
+              "2019-02-25",
+              "2019-02-27",
+              "2019-02-28",
+              "2019-03-04"
+            ],
+            "after_days": [
+              "2019-03-07",
+              "2019-03-09",
+              "2019-03-13",
+              "2019-03-14",
+              "2019-03-15",
+              "2019-03-16",
+              "2019-03-17",
+              "2019-03-18"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-05-09",
+            "start": "2019-05-09",
+            "end": "2019-05-09",
+            "note": "",
+            "clear_days_before": 11,
+            "clear_days_after": 5,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 13.3,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.0132,
+            "ratio_after": 1.0094,
+            "change_pct": -0.38,
+            "change_pct_ci": [
+              -5.07,
+              4.47
+            ],
+            "change_kwh_per_day": -0.74,
+            "change_kwh_per_day_ci": [
+              -10.3,
+              8.54
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-04-25",
+              "2019-04-26",
+              "2019-04-27",
+              "2019-04-28",
+              "2019-05-01",
+              "2019-05-02",
+              "2019-05-03",
+              "2019-05-04",
+              "2019-05-05",
+              "2019-05-06",
+              "2019-05-08"
+            ],
+            "after_days": [
+              "2019-05-11",
+              "2019-05-12",
+              "2019-05-13",
+              "2019-05-14",
+              "2019-05-18"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-20",
+            "start": "2019-11-19",
+            "end": "2019-11-20",
+            "note": "",
+            "clear_days_before": 13,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 35.7,
+            "other_heavy_rain_in_windows": 2,
+            "testable": true,
+            "ratio_before": 0.9669,
+            "ratio_after": 1.0042,
+            "change_pct": 3.85,
+            "change_pct_ci": [
+              -1.33,
+              10.03
+            ],
+            "change_kwh_per_day": 3.68,
+            "change_kwh_per_day_ci": [
+              -1.28,
+              9.58
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-11-05",
+              "2019-11-06",
+              "2019-11-07",
+              "2019-11-08",
+              "2019-11-09",
+              "2019-11-10",
+              "2019-11-11",
+              "2019-11-12",
+              "2019-11-13",
+              "2019-11-15",
+              "2019-11-16",
+              "2019-11-17",
+              "2019-11-18"
+            ],
+            "after_days": [
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26",
+              "2019-11-30",
+              "2019-12-02"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-28",
+            "start": "2019-11-28",
+            "end": "2019-11-28",
+            "note": "",
+            "clear_days_before": 9,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.2,
+            "other_heavy_rain_in_windows": 3,
+            "testable": true,
+            "ratio_before": 0.9761,
+            "ratio_after": 1.0341,
+            "change_pct": 5.94,
+            "change_pct_ci": [
+              -1.68,
+              13.76
+            ],
+            "change_kwh_per_day": 4.96,
+            "change_kwh_per_day_ci": [
+              -1.46,
+              11.27
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-11-15",
+              "2019-11-16",
+              "2019-11-17",
+              "2019-11-18",
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26"
+            ],
+            "after_days": [
+              "2019-11-30",
+              "2019-12-02",
+              "2019-12-05",
+              "2019-12-06",
+              "2019-12-09",
+              "2019-12-11"
+            ]
+          },
+          {
+            "system_id": "1420",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-12-04",
+            "start": "2019-12-04",
+            "end": "2019-12-04",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 12.8,
+            "other_heavy_rain_in_windows": 2,
+            "testable": true,
+            "ratio_before": 1.0042,
+            "ratio_after": 1.0086,
+            "change_pct": 0.44,
+            "change_pct_ci": [
+              -7.3,
+              8.38
+            ],
+            "change_kwh_per_day": 0.37,
+            "change_kwh_per_day_ci": [
+              -6.3,
+              6.83
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26",
+              "2019-11-30",
+              "2019-12-02"
+            ],
+            "after_days": [
+              "2019-12-05",
+              "2019-12-06",
+              "2019-12-09",
+              "2019-12-11",
+              "2019-12-13",
+              "2019-12-16",
+              "2019-12-17"
+            ]
+          }
+        ],
+        "clearest": {
+          "system_id": "1420",
+          "type": "natural rain",
+          "label": "natural rain event, not a maintenance intervention",
+          "date": "2017-07-25",
+          "start": "2017-07-25",
+          "end": "2017-07-25",
+          "note": "",
+          "clear_days_before": 9,
+          "clear_days_after": 10,
+          "window_days": [
+            14,
+            14
+          ],
+          "rain_mm": 11.9,
+          "other_heavy_rain_in_windows": 0,
+          "testable": true,
+          "ratio_before": 0.9699,
+          "ratio_after": 1.0083,
+          "change_pct": 3.97,
+          "change_pct_ci": [
+            -2.48,
+            10.28
+          ],
+          "change_kwh_per_day": 7.22,
+          "change_kwh_per_day_ci": [
+            -4.64,
+            18.05
+          ],
+          "confidence": 0.95,
+          "distinguishable_from_zero": false,
+          "before_days": [
+            "2017-07-13",
+            "2017-07-14",
+            "2017-07-15",
+            "2017-07-16",
+            "2017-07-17",
+            "2017-07-18",
+            "2017-07-21",
+            "2017-07-22",
+            "2017-07-23"
+          ],
+          "after_days": [
+            "2017-07-27",
+            "2017-07-28",
+            "2017-07-29",
+            "2017-07-30",
+            "2017-07-31",
+            "2017-08-01",
+            "2017-08-02",
+            "2017-08-05",
+            "2017-08-07",
+            "2017-08-08"
+          ]
+        }
+      },
+      "rupee_value": {
+        "months": 48.0,
+        "note": "[not available: tariff_inr_per_kwh not provided in data/systems.csv]",
+        "verdict": "[not available: tariff_inr_per_kwh not provided]"
+      },
+      "verdict": "[not available: tariff_inr_per_kwh not provided]",
+      "emissions": {
+        "note": "[not available: emission_factor_kg_per_kwh is empty in config.yaml; no factor is assumed]"
+      }
+    },
+    {
+      "system_id": "34",
+      "name": "Andre Agassi Preparatory Academy - Building A",
+      "data_label": "Public dataset: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake",
+      "status": "ok",
+      "period": {
+        "start": "2016-01-01",
+        "end": "2019-12-31",
+        "months": 48.0
+      },
+      "input_resolution": "hourly",
+      "completeness": {
+        "period_start": "2016-01-01",
+        "period_end": "2019-12-31",
+        "calendar_days": 1461,
+        "valid_days": 1430,
+        "gap_days": 25,
+        "partial_days": 6,
+        "impossible_days": 0,
+        "completeness_pct": 97.9,
+        "counter_resets": 0,
+        "counter_unassignable_gaps": 0,
+        "impossible_interval_values": 0
+      },
+      "inferred_layout": [
+        "pvdaq_system_34.csv: system 34; time column 'measured_on'; power from ['ac_power_hw__2695'] in mixed units; 15-minute steps. unit inferred from peak power vs 146.64 kWp nameplate, not from the column name. the unit of this column changes over time: hW (x100 W) until 2018-08-03, W from 2018-08-04. energy = power x sampling interval; missing samples stay missing."
+      ],
+      "honest_gaps": [],
+      "reference_method": {
+        "mode": "hourly (pvlib)",
+        "description": "Hourly mode. NASA POWER hourly global irradiance is split into beam and diffuse (Erbs), transposed to the array plane (Hay-Davies, pvlib) and converted to DC energy with a PVWatts model (temperature coefficient -0.4%/°C, NOCT 45 °C). Hourly values are summed to days. Performance index = measured ÷ modelled energy. The reference is the system's own 90th-percentile sustained (7-clear-day median) performance per calendar month, pooled over all years and reduced by the upward bias expected from noise. Clear day = all-sky ÷ clear-sky irradiation ≥ 0.85. Assumptions: constant inverter and wiring losses are absorbed by the reference; timestamps are local standard time; the cleanest state seen in each month is representative of a clean array.",
+        "monthly_reference": {
+          "1": 0.7937,
+          "2": 0.7779,
+          "3": 0.7804,
+          "4": 0.7918,
+          "5": 0.8052,
+          "6": 0.7858,
+          "7": 0.7994,
+          "8": 0.8032,
+          "9": 0.7801,
+          "10": 0.756,
+          "11": 0.7461,
+          "12": 0.7202
+        },
+        "monthly_clear_day_counts": {
+          "1": 68,
+          "2": 57,
+          "3": 65,
+          "4": 80,
+          "5": 83,
+          "6": 83,
+          "7": 83,
+          "8": 106,
+          "9": 104,
+          "10": 106,
+          "11": 90,
+          "12": 71
+        },
+        "months_without_own_reference": [],
+        "sustained_noise_fraction": 0.0138,
+        "luck_allowance_fraction": 0.0177
+      },
+      "estimated_loss": {
+        "loss_pct": 3.705,
+        "loss_pct_range": [
+          3.3164,
+          4.2535
+        ],
+        "lost_kwh": 32977.6289,
+        "lost_kwh_range": [
+          29362.5924,
+          38032.7147
+        ],
+        "of_which_sustained_shortfall_kwh": 9304.7198,
+        "sustained_shortfall_kwh_range": [
+          5725.8271,
+          14022.4037
+        ],
+        "sustained_part_deep_drop_kwh": 0.0,
+        "sustained_part_deep_drop_kwh_range": [
+          0.0,
+          0.0
+        ],
+        "sustained_part_moderate_kwh": 9304.7198,
+        "sustained_part_moderate_kwh_range": [
+          5725.8271,
+          14022.4037
+        ],
+        "of_which_outage_days_kwh": 23672.9091,
+        "outage_days_kwh_range": [
+          23283.2344,
+          24227.5951
+        ],
+        "expected_kwh_over_valid_days": 890091.2118,
+        "valid_days_assessed": 1430,
+        "confidence_level": 0.95,
+        "interval_method": "block bootstrap of clear-day residuals and of the reference",
+        "interval_note": null,
+        "shortfall_episodes": [
+          {
+            "start": "2016-01-01",
+            "end": "2016-02-04",
+            "days": 35,
+            "mean_shortfall_pct": 3.8,
+            "max_shortfall_pct": 6.4
+          },
+          {
+            "start": "2016-11-18",
+            "end": "2017-01-04",
+            "days": 48,
+            "mean_shortfall_pct": 3.8,
+            "max_shortfall_pct": 6.3
+          },
+          {
+            "start": "2017-01-09",
+            "end": "2017-01-16",
+            "days": 8,
+            "mean_shortfall_pct": 4.6,
+            "max_shortfall_pct": 6.9
+          },
+          {
+            "start": "2017-10-29",
+            "end": "2018-02-24",
+            "days": 119,
+            "mean_shortfall_pct": 4.2,
+            "max_shortfall_pct": 7.0
+          },
+          {
+            "start": "2018-02-27",
+            "end": "2018-02-27",
+            "days": 1,
+            "mean_shortfall_pct": 0.9,
+            "max_shortfall_pct": 0.9
+          },
+          {
+            "start": "2018-07-24",
+            "end": "2018-08-13",
+            "days": 21,
+            "mean_shortfall_pct": 3.7,
+            "max_shortfall_pct": 4.9
+          },
+          {
+            "start": "2018-12-09",
+            "end": "2019-02-08",
+            "days": 62,
+            "mean_shortfall_pct": 6.4,
+            "max_shortfall_pct": 8.9
+          },
+          {
+            "start": "2019-07-25",
+            "end": "2019-11-28",
+            "days": 127,
+            "mean_shortfall_pct": 4.1,
+            "max_shortfall_pct": 7.6
+          },
+          {
+            "start": "2019-12-12",
+            "end": "2019-12-31",
+            "days": 20,
+            "mean_shortfall_pct": 3.8,
+            "max_shortfall_pct": 4.3
+          }
+        ]
+      },
+      "detection_limit": {
+        "statement": "losses below about 4.0% sustained over 14 days, or about 3.9% sustained over 30 days, cannot be distinguished from noise",
+        "day_to_day_sigma_fraction": 0.0349,
+        "clear_day_share": 0.72,
+        "false_alarm_rate": 0.01,
+        "power": 0.8,
+        "windows": {
+          "14": {
+            "se_fraction": 0.0119,
+            "threshold_fraction": 0.03,
+            "limit_fraction": 0.04
+          },
+          "30": {
+            "se_fraction": 0.0112,
+            "threshold_fraction": 0.03,
+            "limit_fraction": 0.0394
+          }
+        },
+        "daily_mode_cross_check": {
+          "day_to_day_sigma_fraction": 0.0328,
+          "windows": {
+            "14": {
+              "se_fraction": 0.0124,
+              "threshold_fraction": 0.03,
+              "limit_fraction": 0.0404
+            },
+            "30": {
+              "se_fraction": 0.0131,
+              "threshold_fraction": 0.0305,
+              "limit_fraction": 0.0415
+            }
+          }
+        }
+      },
+      "cause_hypotheses": [
+        {
+          "cause": "outage or fault",
+          "status": "indicated",
+          "facts": [
+            "Output was near zero on 37 day(s) with good irradiance: 2016-06-04 to 2016-06-15 (12 days); 2019-02-15 to 2019-03-05 (19 days); 2019-03-07 to 2019-03-09 (3 days); 2019-03-11 to 2019-03-13 (3 days).",
+            "25 day(s) have no usable generation data (nothing logged, or a reading missing from at least one inverter); whether the system produced on those days is unknown and they are not counted as loss."
+          ],
+          "hypothesis": "Near-zero days are consistent with an inverter trip, grid outage or a monitoring fault that recorded zeros. The data cannot tell these apart. Near-freezing temperatures on 1 of these days mean snow cover is also possible.",
+          "outage_days": 37,
+          "deep_shortfall_days": 0
+        },
+        {
+          "cause": "soiling",
+          "status": "not indicated",
+          "facts": [
+            "Between cleaning events, performance declined in 24 of 24 usable intervals, at a median of 0.159% per day in the declining ones.",
+            "1 of 14 testable natural rain event(s) were followed by a rise in normalised performance that is distinguishable from zero.",
+            "rdtools estimates a soiling loss of 4.5% (range 2.7–7.0%, rdtools 3.2.1 stochastic rate and recovery (SRR)). Shuffle check: with the same clear-day values in random time order, which contain no soiling pattern, it reports 3.8–5.2%."
+          ],
+          "hypothesis": "No soiling distinguishable from scatter. The estimate of 4.5% (range 2.7–7.0%, rdtools 3.2.1 stochastic rate and recovery (SRR)) is not clearly above what the same method reports on shuffled data (up to 5.2%), so most or all of it can be produced by day-to-day scatter alone.",
+          "numbers": {
+            "method": "rdtools 3.2.1 stochastic rate and recovery (SRR)",
+            "soiling_ratio": 0.9552,
+            "soiling_ratio_ci": [
+              0.9301,
+              0.973
+            ],
+            "soiling_loss_pct": 4.48,
+            "soiling_loss_pct_ci": [
+              2.7,
+              6.99
+            ],
+            "confidence": 0.95,
+            "shuffled_order_loss_pct": [
+              4.57,
+              3.77,
+              5.24
+            ]
+          }
+        },
+        {
+          "cause": "ageing or degradation",
+          "status": "indicated",
+          "facts": [
+            "Year-on-year change of clear-day performance over 4.0 years: -0.95% per year (range -1.58 to -0.42% per year, rdtools 3.2.1 year-on-year)."
+          ],
+          "hypothesis": "Pattern consistent with gradual ageing or another slow loss not reversed by rain: the whole range is below zero.",
+          "numbers": {
+            "rate_pct_per_year": -0.95,
+            "rate_pct_per_year_ci": [
+              -1.58,
+              -0.42
+            ],
+            "method": "rdtools 3.2.1 year-on-year",
+            "confidence": 0.95
+          }
+        },
+        {
+          "cause": "shading",
+          "status": "indicated",
+          "facts": [
+            "Clock check: on clear days the measured daily profile is centred -3 minutes from the modelled one (-2 min in May-August, -4 min in November-February).",
+            "14:00-15:00: output was a median 18% below the midday level on most clear days in month(s) [12].",
+            "15:00-16:00: output was a median 24% below the midday level on most clear days in month(s) [1].",
+            "16:00-17:00: output was a median 23% below the midday level on most clear days in month(s) [3].",
+            "17:00-18:00: output was a median 28% below the midday level on most clear days in month(s) [6].",
+            "Symmetry check: with the sun 15–25° up, output is at 99% of the midday level in the morning and 88% in the afternoon."
+          ],
+          "hypothesis": "Pattern consistent with shading or a horizon obstruction in the afternoon. A modelling error at low sun would lower morning and afternoon alike; here the afternoon is clearly lower at the same sun height, which points to the site: an obstruction on that side, or an array facing slightly away from the stated azimuth. It needs a site check.",
+          "numbers": {
+            "clock_offset_minutes": -3,
+            "recurring_dips": [
+              {
+                "month": 1,
+                "hour": "15:00-16:00",
+                "median_dip_pct": 23.9,
+                "share_of_clear_days_pct": 89,
+                "clear_days": 18
+              },
+              {
+                "month": 3,
+                "hour": "16:00-17:00",
+                "median_dip_pct": 23.2,
+                "share_of_clear_days_pct": 72,
+                "clear_days": 40
+              },
+              {
+                "month": 6,
+                "hour": "17:00-18:00",
+                "median_dip_pct": 27.8,
+                "share_of_clear_days_pct": 71,
+                "clear_days": 68
+              },
+              {
+                "month": 12,
+                "hour": "14:00-15:00",
+                "median_dip_pct": 18.5,
+                "share_of_clear_days_pct": 72,
+                "clear_days": 71
+              }
+            ],
+            "low_sun_level_morning": 0.991,
+            "low_sun_level_afternoon": 0.876
+          }
+        }
+      ],
+      "recovery": {
+        "event_source": "natural rain event, not a maintenance intervention",
+        "events": [
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-01-05",
+            "start": "2016-01-05",
+            "end": "2016-01-05",
+            "note": "",
+            "clear_days_before": 1,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.0,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (1 before, 8 after)"
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-04-09",
+            "start": "2016-04-09",
+            "end": "2016-04-09",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 11,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 16.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 1.0185,
+            "ratio_after": 1.0298,
+            "change_pct": 1.12,
+            "change_pct_ci": [
+              -3.79,
+              6.13
+            ],
+            "change_kwh_per_day": 8.21,
+            "change_kwh_per_day_ci": [
+              -28.18,
+              44.3
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-03-26",
+              "2016-03-31",
+              "2016-04-01",
+              "2016-04-02",
+              "2016-04-03",
+              "2016-04-04",
+              "2016-04-05"
+            ],
+            "after_days": [
+              "2016-04-12",
+              "2016-04-13",
+              "2016-04-14",
+              "2016-04-16",
+              "2016-04-17",
+              "2016-04-18",
+              "2016-04-19",
+              "2016-04-20",
+              "2016-04-21",
+              "2016-04-22",
+              "2016-04-23"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-22",
+            "start": "2016-12-22",
+            "end": "2016-12-22",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 17.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.975,
+            "ratio_after": 0.9802,
+            "change_pct": 0.53,
+            "change_pct_ci": [
+              -8.06,
+              10.26
+            ],
+            "change_kwh_per_day": 1.7,
+            "change_kwh_per_day_ci": [
+              -27.34,
+              32.02
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-08",
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2016-12-24",
+            "start": "2016-12-24",
+            "end": "2016-12-24",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.9,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9735,
+            "ratio_after": 0.9732,
+            "change_pct": -0.03,
+            "change_pct_ci": [
+              -8.69,
+              9.39
+            ],
+            "change_kwh_per_day": -0.11,
+            "change_kwh_per_day_ci": [
+              -29.74,
+              29.14
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2016-12-10",
+              "2016-12-13",
+              "2016-12-17",
+              "2016-12-18",
+              "2016-12-19",
+              "2016-12-20"
+            ],
+            "after_days": [
+              "2016-12-25",
+              "2016-12-26",
+              "2016-12-27",
+              "2016-12-28",
+              "2016-12-29",
+              "2017-01-01",
+              "2017-01-06"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-01-22",
+            "start": "2017-01-22",
+            "end": "2017-01-22",
+            "note": "",
+            "clear_days_before": 6,
+            "clear_days_after": 10,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 15.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9872,
+            "ratio_after": 1.0228,
+            "change_pct": 3.61,
+            "change_pct_ci": [
+              -4.42,
+              12.06
+            ],
+            "change_kwh_per_day": 14.61,
+            "change_kwh_per_day_ci": [
+              -19.23,
+              45.76
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-01-11",
+              "2017-01-15",
+              "2017-01-16",
+              "2017-01-17",
+              "2017-01-18",
+              "2017-01-21"
+            ],
+            "after_days": [
+              "2017-01-24",
+              "2017-01-25",
+              "2017-01-26",
+              "2017-01-27",
+              "2017-01-28",
+              "2017-01-29",
+              "2017-01-30",
+              "2017-01-31",
+              "2017-02-01",
+              "2017-02-04"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-02-18",
+            "start": "2017-02-18",
+            "end": "2017-02-18",
+            "note": "",
+            "clear_days_before": 4,
+            "clear_days_after": 8,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.6,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9874,
+            "ratio_after": 1.0159,
+            "change_pct": 2.88,
+            "change_pct_ci": [
+              -2.66,
+              9.28
+            ],
+            "change_kwh_per_day": 13.7,
+            "change_kwh_per_day_ci": [
+              -13.1,
+              42.66
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-02-04",
+              "2017-02-13",
+              "2017-02-14",
+              "2017-02-15"
+            ],
+            "after_days": [
+              "2017-02-22",
+              "2017-02-23",
+              "2017-02-24",
+              "2017-02-26",
+              "2017-02-28",
+              "2017-03-01",
+              "2017-03-02",
+              "2017-03-03"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-07-25",
+            "start": "2017-07-25",
+            "end": "2017-07-25",
+            "note": "",
+            "clear_days_before": 9,
+            "clear_days_after": 10,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9902,
+            "ratio_after": 1.0211,
+            "change_pct": 3.12,
+            "change_pct_ci": [
+              -2.37,
+              7.91
+            ],
+            "change_kwh_per_day": 21.95,
+            "change_kwh_per_day_ci": [
+              -16.91,
+              54.9
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-07-13",
+              "2017-07-14",
+              "2017-07-15",
+              "2017-07-16",
+              "2017-07-17",
+              "2017-07-18",
+              "2017-07-21",
+              "2017-07-22",
+              "2017-07-23"
+            ],
+            "after_days": [
+              "2017-07-27",
+              "2017-07-28",
+              "2017-07-29",
+              "2017-07-30",
+              "2017-07-31",
+              "2017-08-01",
+              "2017-08-02",
+              "2017-08-05",
+              "2017-08-07",
+              "2017-08-08"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2017-09-09",
+            "start": "2017-09-09",
+            "end": "2017-09-09",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 12,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 11.2,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9736,
+            "ratio_after": 1.0568,
+            "change_pct": 8.54,
+            "change_pct_ci": [
+              -1.85,
+              22.53
+            ],
+            "change_kwh_per_day": 52.98,
+            "change_kwh_per_day_ci": [
+              -12.3,
+              127.68
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-08-26",
+              "2017-08-31",
+              "2017-09-01",
+              "2017-09-02",
+              "2017-09-03",
+              "2017-09-04",
+              "2017-09-07"
+            ],
+            "after_days": [
+              "2017-09-10",
+              "2017-09-11",
+              "2017-09-12",
+              "2017-09-14",
+              "2017-09-15",
+              "2017-09-16",
+              "2017-09-17",
+              "2017-09-18",
+              "2017-09-19",
+              "2017-09-20",
+              "2017-09-21",
+              "2017-09-22"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2018-01-09",
+            "start": "2018-01-09",
+            "end": "2018-01-09",
+            "note": "",
+            "clear_days_before": 8,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 30.9,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9503,
+            "ratio_after": 0.9468,
+            "change_pct": -0.37,
+            "change_pct_ci": [
+              -6.56,
+              7.17
+            ],
+            "change_kwh_per_day": -1.34,
+            "change_kwh_per_day_ci": [
+              -24.91,
+              24.76
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2017-12-27",
+              "2017-12-28",
+              "2017-12-29",
+              "2017-12-31",
+              "2018-01-03",
+              "2018-01-04",
+              "2018-01-05",
+              "2018-01-07"
+            ],
+            "after_days": [
+              "2018-01-10",
+              "2018-01-11",
+              "2018-01-12",
+              "2018-01-13",
+              "2018-01-14",
+              "2018-01-15",
+              "2018-01-21",
+              "2018-01-22",
+              "2018-01-23"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-01-15",
+            "start": "2019-01-15",
+            "end": "2019-01-15",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 9,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9139,
+            "ratio_after": 0.9153,
+            "change_pct": 0.15,
+            "change_pct_ci": [
+              -3.5,
+              3.38
+            ],
+            "change_kwh_per_day": 0.57,
+            "change_kwh_per_day_ci": [
+              -13.11,
+              12.38
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-01",
+              "2019-01-02",
+              "2019-01-03",
+              "2019-01-04",
+              "2019-01-09",
+              "2019-01-10",
+              "2019-01-13"
+            ],
+            "after_days": [
+              "2019-01-18",
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-02",
+            "start": "2019-02-02",
+            "end": "2019-02-02",
+            "note": "",
+            "clear_days_before": 10,
+            "clear_days_after": 4,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.5,
+            "other_heavy_rain_in_windows": 1,
+            "testable": true,
+            "ratio_before": 0.9146,
+            "ratio_after": 0.9896,
+            "change_pct": 8.2,
+            "change_pct_ci": [
+              -1.17,
+              16.61
+            ],
+            "change_kwh_per_day": 33.79,
+            "change_kwh_per_day_ci": [
+              -4.83,
+              67.67
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-01-19",
+              "2019-01-22",
+              "2019-01-23",
+              "2019-01-24",
+              "2019-01-25",
+              "2019-01-26",
+              "2019-01-27",
+              "2019-01-28",
+              "2019-01-30",
+              "2019-02-01"
+            ],
+            "after_days": [
+              "2019-02-06",
+              "2019-02-07",
+              "2019-02-08",
+              "2019-02-11"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-02-14",
+            "start": "2019-02-14",
+            "end": "2019-02-14",
+            "note": "",
+            "clear_days_before": 5,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 29.8,
+            "other_heavy_rain_in_windows": 1,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (5 before, 0 after)"
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-03-06",
+            "start": "2019-03-06",
+            "end": "2019-03-06",
+            "note": "",
+            "clear_days_before": 0,
+            "clear_days_after": 0,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 10.7,
+            "other_heavy_rain_in_windows": 0,
+            "testable": false,
+            "reason": "fewer than 4 clear, fault-free days on one side (0 before, 0 after)"
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-05-09",
+            "start": "2019-05-09",
+            "end": "2019-05-09",
+            "note": "",
+            "clear_days_before": 11,
+            "clear_days_after": 5,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 13.3,
+            "other_heavy_rain_in_windows": 0,
+            "testable": true,
+            "ratio_before": 0.9933,
+            "ratio_after": 0.9925,
+            "change_pct": -0.08,
+            "change_pct_ci": [
+              -5.19,
+              5.32
+            ],
+            "change_kwh_per_day": -0.61,
+            "change_kwh_per_day_ci": [
+              -39.71,
+              38.36
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-04-25",
+              "2019-04-26",
+              "2019-04-27",
+              "2019-04-28",
+              "2019-05-01",
+              "2019-05-02",
+              "2019-05-03",
+              "2019-05-04",
+              "2019-05-05",
+              "2019-05-06",
+              "2019-05-08"
+            ],
+            "after_days": [
+              "2019-05-11",
+              "2019-05-12",
+              "2019-05-13",
+              "2019-05-14",
+              "2019-05-18"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-20",
+            "start": "2019-11-19",
+            "end": "2019-11-20",
+            "note": "",
+            "clear_days_before": 13,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 35.7,
+            "other_heavy_rain_in_windows": 2,
+            "testable": true,
+            "ratio_before": 0.9312,
+            "ratio_after": 0.9841,
+            "change_pct": 5.68,
+            "change_pct_ci": [
+              0.7,
+              10.61
+            ],
+            "change_kwh_per_day": 20.78,
+            "change_kwh_per_day_ci": [
+              2.55,
+              38.87
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": true,
+            "before_days": [
+              "2019-11-05",
+              "2019-11-06",
+              "2019-11-07",
+              "2019-11-08",
+              "2019-11-09",
+              "2019-11-10",
+              "2019-11-11",
+              "2019-11-12",
+              "2019-11-13",
+              "2019-11-15",
+              "2019-11-16",
+              "2019-11-17",
+              "2019-11-18"
+            ],
+            "after_days": [
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26",
+              "2019-11-30",
+              "2019-12-02"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-11-28",
+            "start": "2019-11-28",
+            "end": "2019-11-28",
+            "note": "",
+            "clear_days_before": 9,
+            "clear_days_after": 6,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 14.2,
+            "other_heavy_rain_in_windows": 3,
+            "testable": true,
+            "ratio_before": 0.9455,
+            "ratio_after": 1.015,
+            "change_pct": 7.35,
+            "change_pct_ci": [
+              -0.46,
+              14.6
+            ],
+            "change_kwh_per_day": 23.68,
+            "change_kwh_per_day_ci": [
+              -1.49,
+              46.01
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-11-15",
+              "2019-11-16",
+              "2019-11-17",
+              "2019-11-18",
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26"
+            ],
+            "after_days": [
+              "2019-11-30",
+              "2019-12-02",
+              "2019-12-05",
+              "2019-12-06",
+              "2019-12-09",
+              "2019-12-11"
+            ]
+          },
+          {
+            "system_id": "34",
+            "type": "natural rain",
+            "label": "natural rain event, not a maintenance intervention",
+            "date": "2019-12-04",
+            "start": "2019-12-04",
+            "end": "2019-12-04",
+            "note": "",
+            "clear_days_before": 7,
+            "clear_days_after": 7,
+            "window_days": [
+              14,
+              14
+            ],
+            "rain_mm": 12.8,
+            "other_heavy_rain_in_windows": 2,
+            "testable": true,
+            "ratio_before": 0.9841,
+            "ratio_after": 0.9941,
+            "change_pct": 1.02,
+            "change_pct_ci": [
+              -5.98,
+              8.84
+            ],
+            "change_kwh_per_day": 3.31,
+            "change_kwh_per_day_ci": [
+              -20.17,
+              28.09
+            ],
+            "confidence": 0.95,
+            "distinguishable_from_zero": false,
+            "before_days": [
+              "2019-11-22",
+              "2019-11-23",
+              "2019-11-24",
+              "2019-11-25",
+              "2019-11-26",
+              "2019-11-30",
+              "2019-12-02"
+            ],
+            "after_days": [
+              "2019-12-05",
+              "2019-12-06",
+              "2019-12-09",
+              "2019-12-11",
+              "2019-12-13",
+              "2019-12-16",
+              "2019-12-17"
+            ]
+          }
+        ],
+        "clearest": {
+          "system_id": "34",
+          "type": "natural rain",
+          "label": "natural rain event, not a maintenance intervention",
+          "date": "2017-07-25",
+          "start": "2017-07-25",
+          "end": "2017-07-25",
+          "note": "",
+          "clear_days_before": 9,
+          "clear_days_after": 10,
+          "window_days": [
+            14,
+            14
+          ],
+          "rain_mm": 11.9,
+          "other_heavy_rain_in_windows": 0,
+          "testable": true,
+          "ratio_before": 0.9902,
+          "ratio_after": 1.0211,
+          "change_pct": 3.12,
+          "change_pct_ci": [
+            -2.37,
+            7.91
+          ],
+          "change_kwh_per_day": 21.95,
+          "change_kwh_per_day_ci": [
+            -16.91,
+            54.9
+          ],
+          "confidence": 0.95,
+          "distinguishable_from_zero": false,
+          "before_days": [
+            "2017-07-13",
+            "2017-07-14",
+            "2017-07-15",
+            "2017-07-16",
+            "2017-07-17",
+            "2017-07-18",
+            "2017-07-21",
+            "2017-07-22",
+            "2017-07-23"
+          ],
+          "after_days": [
+            "2017-07-27",
+            "2017-07-28",
+            "2017-07-29",
+            "2017-07-30",
+            "2017-07-31",
+            "2017-08-01",
+            "2017-08-02",
+            "2017-08-05",
+            "2017-08-07",
+            "2017-08-08"
+          ]
+        }
+      },
+      "rupee_value": {
+        "months": 48.0,
+        "note": "[not available: tariff_inr_per_kwh not provided in data/systems.csv]",
+        "verdict": "[not available: tariff_inr_per_kwh not provided]"
+      },
+      "verdict": "[not available: tariff_inr_per_kwh not provided]",
+      "emissions": {
+        "note": "[not available: emission_factor_kg_per_kwh is empty in config.yaml; no factor is assumed]"
+      }
+    }
+  ],
+  "notes": [
+    "system 34: tariff_inr_per_kwh, cleaning_cost_inr not provided",
+    "system 1419: tariff_inr_per_kwh, cleaning_cost_inr not provided",
+    "system 1420: tariff_inr_per_kwh, cleaning_cost_inr not provided",
+    "system JAIPUR1: tariff_inr_per_kwh, cleaning_cost_inr not provided"
+  ]
+}

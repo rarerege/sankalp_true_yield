@@ -1,0 +1,218 @@
+# TrueYield configuration. Every threshold used by the pipeline lives here so
+# that a reviewer can see (and change) each judgement call in one place.
+
+paths:
+  raw_dir: data/raw
+  cache_dir: data/cache
+  systems_csv: data/systems.csv
+  events_csv: data/events.csv
+  results_dir: results
+
+# Used only when data/raw/ is empty (python -m trueyield fetch-public).
+public_dataset:
+  name: "NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake"
+  base_url: "https://oedi-data-lake.s3.us-west-2.amazonaws.com/"
+  prefix: "pvdaq/csv/"
+  landing_page: "https://data.openei.org/submissions/4568"
+  licence: "Creative Commons Attribution 4.0 (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/"
+  citation: "Deline, C., Perry, K., Deceglie, M., Muller, M., Sekulic, W., & Jordan, D. (2021). Photovoltaic Data Acquisition (PVDAQ) Public Datasets. [Data set]. Open Energy Data Initiative (OEDI). NREL. https://doi.org/10.25984/1846021"
+  system_ids: [34, 1419, 1420]
+  start: "2016-01-01"
+  end: "2019-12-31"
+  location_label: "Las Vegas area, Nevada, USA"
+  workers: 24
+
+ingest:
+  # A day is "partial" if fewer than this share of its daylight samples exist.
+  min_daylight_coverage: 0.90
+  # A counter step spanning more than this many hours cannot be assigned to a day.
+  max_counter_gap_hours: 18
+  # Interval energy above capacity x hours x this factor is physically impossible.
+  max_capacity_factor: 1.3
+  # Daily specific yield above this (kWh/kWp/day) is impossible for fixed PV.
+  max_daily_specific_yield: 9.5
+  # Tiny negative night-time readings (inverter standby) are clipped to zero if
+  # they are smaller than this share of capacity; larger negatives are rejected.
+  negative_clip_fraction: 0.02
+  # "Daylight" for the coverage check = sun at least this many degrees up.
+  daylight_min_sun_elevation_deg: 5.0
+  # A reading stands for the time since the previous one unless that exceeds
+  # this many sampling steps; then it is a logging gap and stays uncovered.
+  logging_gap_step_factor: 1.5
+  # A column is a lifetime counter if at least this share of its steps do not decrease.
+  counter_min_nondecreasing_share: 0.995
+  # A column is a daily-reset counter ("energy today") if it mostly rises,
+  # drops about once per day, and restarts near zero after each drop.
+  daily_reset_min_nondecreasing_share: 0.9
+  daily_reset_drops_per_day_range: [0.5, 1.5]
+  daily_reset_max_restart_fraction: 0.2
+  # Unit inference: the unit is chosen so that these land in a plausible range.
+  unit_peak_quantile: 0.995                       # "peak" = this quantile of power
+  plausible_peak_power_fraction: [0.3, 1.5]       # peak power / nameplate
+  plausible_daily_yield_kwh_per_kwp: [0.3, 9.0]   # mean daily energy / nameplate
+  # When a unit changes inside a column, days this dark fit either unit and
+  # take the unit of the nearest brighter day.
+  dark_day_peak_fraction: 0.05
+  # A reading holding at least this many daylight hours of two different days
+  # cannot be assigned to either day.
+  straddle_min_daylight_hours: 0.25
+  # An hour is complete when its readings cover this many hours of it.
+  hourly_coverage_range: [0.9, 1.1]
+
+weather:
+  nasa_power_base: "https://power.larc.nasa.gov/api/temporal"
+  community: RE
+  daily_parameters: [ALLSKY_SFC_SW_DWN, CLRSKY_SFC_SW_DWN, T2M, PRECTOTCORR]
+  hourly_parameters: [ALLSKY_SFC_SW_DWN, CLRSKY_SFC_SW_DWN, T2M, PRECTOTCORR]
+  missing_flag: -999
+  timeout_s: 60
+  retries: 6
+
+expected:
+  # auto = hourly pvlib model when sub-daily generation data exists, else daily.
+  mode: auto
+  temp_coeff_per_c: -0.004        # typical crystalline-silicon power coefficient
+  noct_c: 45                      # nominal operating cell temperature
+  # Clear-day filter: all-sky / clear-sky daily irradiation at or above this.
+  clear_day_min_clearness: 0.85
+  # Days with less irradiation than this (kWh/m2/day) are too dark to normalise.
+  min_daily_irradiation: 1.5
+  # "Sustained" = median over this many consecutive clear days.
+  sustained_clear_days: 7
+  sustained_min_clear_days: 4
+  # A "sustained" window may not stretch over more calendar days than this.
+  sustained_max_span_days: 30
+  # Noise is measured around a running median this long (follows season and
+  # slow soiling), needing at least this many clear days in the window.
+  noise_trend_window_days: 61
+  noise_trend_min_clear_days: 10
+  # Reference = this quantile of sustained clear-day performance per calendar month.
+  reference_quantile: 0.90
+  reference_min_days_per_month: 8
+
+detect:
+  # Calendar window for the smoothed performance ratio used to find shortfalls.
+  smoothing_window_days: 15
+  smoothing_min_clear_days: 4
+  # Never flag a shortfall smaller than this, even if noise is very low.
+  min_shortfall_fraction: 0.03
+  min_episode_days: 7
+  # Once triggered, an episode extends while the smoothed ratio stays below
+  # 1 - release_ratio x threshold (hysteresis, so slow ramps are counted from their start).
+  release_ratio: 0.33
+  # A sustained shortfall deeper than this is treated as a partial outage
+  # (for example one inverter or string off), not as soiling.
+  partial_outage_min_fraction: 0.25
+  # Do not carry the smoothed ratio across clear-day gaps longer than this.
+  max_interpolation_gap_days: 21
+  # Detection-limit design values: one-sided false-alarm rate and power.
+  # 1% per window, because years of data contain many windows to test.
+  false_alarm_rate: 0.01
+  power: 0.80
+  detection_windows_days: [14, 30]
+  # For a W-day window the noise trend is at least this many times W long.
+  noise_trend_window_multiple: 3
+  # Fewer clear days than this: no bootstrap interval, and no loss is reported.
+  bootstrap_min_clear_days: 30
+  # Outage: output below this share of expected on a day with good irradiance.
+  outage_max_fraction_of_expected: 0.10
+  outage_min_clearness: 0.50
+
+bootstrap:
+  samples: 2000
+  confidence: 0.95
+  block_days: 7
+  seed: 20261003
+
+causes:
+  soiling_reps: 300      # rdtools Monte Carlo draws (slow: ~0.2 s each)
+  degradation_min_years: 2.0
+  # Shading: an hour is a recurring dip if its clear-day ratio to the model is
+  # this far below the day's midday ratio on at least this share of clear days.
+  shading_dip_fraction: 0.15
+  shading_min_share_of_days: 0.70
+  shading_min_sun_elevation_deg: 15
+  shading_min_clear_days: 10
+  # Midday level = median of this many highest-output hours of the day.
+  shading_midday_hours: 3
+  # Symmetry check: compare morning and afternoon within this many degrees of
+  # sun height above the minimum. A low-sun modelling error hits both alike;
+  # a difference larger than this fraction points to the site instead.
+  shading_symmetry_band_deg: 10
+  shading_symmetry_min_difference: 0.10
+  # Clock check: the hourly test needs measured and modelled days to line up.
+  clock_max_offset_minutes: 20
+  clock_max_seasonal_difference_minutes: 30
+  clock_summer_months: [5, 6, 7, 8]
+  clock_winter_months: [11, 12, 1, 2]
+  # Soiling is assessed only with at least this many clear days, and called
+  # "indicated" only if the low end of its range exceeds this loss.
+  soiling_min_clear_days: 60
+  soiling_min_loss_pct: 0.5
+  # Shuffle check: the same real clear-day values in random time order contain
+  # no soiling pattern, so whatever rdtools reports on them is its noise floor.
+  soiling_shuffle_runs: 3
+  soiling_shuffle_reps: 100
+  # Fallback soiling estimate (used only when rdtools is unavailable).
+  fallback_soiling_min_points: 5
+  fallback_soiling_min_days: 14
+  fallback_soiling_reps: 300
+  # Fallback year-on-year estimate (used only when rdtools is unavailable).
+  degradation_min_pairs: 30
+  degradation_block_days: 30
+  # Near-zero days colder than this may be snow rather than a fault.
+  snow_possible_below_c: 2.0
+
+verify:
+  window_days_before: 14
+  window_days_after: 14
+  min_clear_days_each_side: 4
+  heavy_rain_mm: 10.0
+
+economics:
+  # Verdict assumes one cleaning per month at cleaning_cost_inr recovers the
+  # sustained (non-outage) shortfall. This is a screening rule, not a quote.
+  days_per_month: 30.44
+
+emissions:
+  # Leave empty to skip the emissions line. Do not guess a factor.
+  emission_factor_kg_per_kwh:
+  emission_factor_source:
+  emission_factor_year:
+
+validation:
+  stretch_days: 240
+  stretch_step_days: 7              # candidate stretches start this many days apart
+  stretch_min_valid_share: 0.9      # share of valid days required
+  stretch_min_clear_share: 0.3      # share of clear days required
+  ramp_start_offset_days: 45        # soiling ramp starts this long into the stretch
+  outage_gap_after_ramp_days: 30    # outage is placed at least this long after the ramp
+  soiling_ramp_fraction: 0.10
+  soiling_ramp_days: 60
+  outage_days: 3
+  detection_check_trials: 30
+  # Step sizes tried in the detection check, as multiples of the stated limit.
+  detection_check_multiples: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+  seed: 7
+
+slide:
+  # slide6_values.md leads with the dataset whose label contains this text.
+  # Leave empty to write one block of five lines per dataset instead.
+  lead_dataset: "Jaipur"
+  # The dataset whose injected-loss validation is cited as the method check.
+  validation_dataset: "PVDAQ"
+  # Line 3: "planned" = recovery test planned; "event" = the best-observed tested event.
+  recovery_line: planned
+  # Wording of the planned test. Name the system once you have one.
+  planned_recovery_test: "one dated panel cleaning on an Indian rooftop system, comparing clear-day weather-normalised output for 14 days before and after"
+
+charts:
+  navy: "#0B2545"
+  amber: "#F5A623"
+  green: "#2E7D5B"
+  background: "#FAF8F3"
+  dpi: 160
+  # Chart 1 draws daily energy as thin lines and this running mean in bold; set to 1 for daily values only.
+  energy_smoothing_days: 7
+  # Chart 2 marks days with at least this much rain.
+  rain_marker_mm: 1.0

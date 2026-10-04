@@ -1,0 +1,18 @@
+# TrueYield, pinned to the versions the results were produced with (Python 3.11).
+pandas==3.0.6
+numpy==2.4.6
+scipy==1.17.1
+pvlib==0.16.1
+matplotlib==3.11.2
+requests==2.34.2
+PyYAML==6.0.3
+openpyxl==3.1.5
+reportlab==5.0.1
+pytest==9.1.1
+
+# Optional: soiling (SRR) and year-on-year degradation. Without it the pipeline
+# falls back to simpler built-in estimates and says so in the report.
+rdtools==3.2.1
+
+# Optional: only for the viewer (streamlit run app.py).
+streamlit==1.64.0

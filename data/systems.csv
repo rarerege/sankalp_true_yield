@@ -1,0 +1,5 @@
+system_id,name,capacity_kwp,latitude,longitude,tilt_deg,azimuth_deg,commissioning_date,tariff_inr_per_kwh,cleaning_cost_inr,location,utc_offset_hours
+34,Andre Agassi Preparatory Academy - Building A,146.64,36.1952,-115.1582,11.2,180.0,2010-08-23,,,"Las Vegas area, Nevada, USA",-8
+1419,Clark County-NV - Hollywood Rec Center,40.0,36.1534,-115.0256,10.0,210.0,2015-06-24,,,"Las Vegas area, Nevada, USA",-8
+1420,Clark County-NV - Government Center,30.0,36.1654,-115.1534,10.0,180.0,2015-06-24,,,"Las Vegas area, Nevada, USA",-8
+JAIPUR1,"Fitpack Textiles rooftop, Jaipur",120,26.7664,75.8326,,,,,,"Jaipur, Rajasthan, India",5.5

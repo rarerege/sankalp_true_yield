@@ -1,0 +1,22 @@
+kind: public_dataset
+name: NREL PVDAQ (Photovoltaic Data Acquisition) via OEDI data lake
+url: https://oedi-data-lake.s3.us-west-2.amazonaws.com/pvdaq/csv/
+landing_page: https://data.openei.org/submissions/4568
+system_ids:
+- '34'
+- '1419'
+- '1420'
+period:
+- '2016-01-01'
+- '2019-12-31'
+retrieved_on: '2026-10-03'
+licence: Creative Commons Attribution 4.0 (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+citation: Deline, C., Perry, K., Deceglie, M., Muller, M., Sekulic, W., & Jordan,
+  D. (2021). Photovoltaic Data Acquisition (PVDAQ) Public Datasets. [Data set]. Open
+  Energy Data Initiative (OEDI). NREL. https://doi.org/10.25984/1846021
+url_note: objects under pvdata/system_id=<id>/year=<y>/month=<m>/day=<d>/
+site_details: capacity, coordinates, tilt, azimuth and start date in data/systems.csv
+  are copied from PVDAQ's own system_metadata/<id>_system_metadata.json. Nothing was
+  guessed.
+permission_notes: CC BY 4.0 allows reuse with attribution; cite the dataset as above.
+  Used unmodified.

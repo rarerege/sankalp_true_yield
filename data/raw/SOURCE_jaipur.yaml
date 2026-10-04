@@ -1,0 +1,23 @@
+kind: public_dataset
+name: Solar Panel Data, Jaipur rooftop plant (Mendeley Data)
+url: https://data.mendeley.com/public-files/datasets/82jswfyz5p/files/18ed9e38-4dbc-473e-b599-8ba235943761/file_downloaded
+landing_page: https://data.mendeley.com/datasets/82jswfyz5p/1
+licence: Creative Commons Attribution 4.0 (CC BY 4.0)
+citation: 'Parashar, Bhupender; Verma, Richa (2024), "Solar Panel Data", Mendeley
+  Data, V1, doi: 10.17632/82jswfyz5p.1'
+system_ids:
+- JAIPUR1
+period:
+- '2022-01-01'
+- '2022-12-31'
+retrieved_on: '2026-10-04'
+site_details: Plant name (Fitpack Textiles, Jaipur), coordinates and the two inverter
+  capacities (20 kW + 100 kW) are taken from the dataset. Capacity in data/systems.csv
+  is the 120 kW inverter total; the DC array size is not published. Tilt, azimuth
+  and commissioning date are not published and are left blank, not guessed.
+preparation: tools/prepare_jaipur.py copies each day's date and plant total ('Main',
+  kWh) from the original sheet (kept unmodified in data/source/) into data/raw/JAIPUR1_daily.csv.
+  The year 2022 comes from the dataset description. No value is altered. Zero-energy
+  days (27 in December, which the authors describe as a plant breakdown, and 3 in
+  September) are kept as recorded.
+permission_notes: CC BY 4.0 allows reuse with attribution; cite the dataset as above.
